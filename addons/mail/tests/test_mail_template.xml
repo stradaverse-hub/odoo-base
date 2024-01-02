@@ -11,7 +11,7 @@
         <field name="email_from">"{{ object.company_id.name }}" &lt;{{ (object.company_id.email or user.email) }}&gt;</field>
         <field name="email_to">{{ object.email_formatted }}</field>
         <field name="body_html" type="html">
-            <div>Hello Odoo</div>
+            <div>Hello Strada</div>
         </field>
         <field name="lang">{{ object.lang }}</field>
         <field name="attachment_ids" eval="[(6, 0, [ref('mail_template_test_attachment')])]"/>

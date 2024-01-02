@@ -6,6 +6,7 @@
         web_icon="mail,static/description/icon.svg"
         groups="base.group_user"
         sequence="5"
+        active="False"
     />
 
     <record id="base.menu_email" model="ir.ui.menu">

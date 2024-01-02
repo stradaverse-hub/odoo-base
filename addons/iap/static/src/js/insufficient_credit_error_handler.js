@@ -23,7 +23,7 @@ class InsufficientCreditDialog extends Component {
         const { _t } = this.env;
         const { isEnterprise } = odoo.info;
         if (errorData.trial && isEnterprise) {
-            this.buttonMessage = _t("Start a Trial at Odoo");
+            this.buttonMessage = _t("Start a Trial at Strada");
         } else {
             this.buttonMessage = _t("Buy credits");
         }

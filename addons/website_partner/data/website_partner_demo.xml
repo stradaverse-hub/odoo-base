@@ -59,14 +59,14 @@ Throughout this time we have served a large number of clients belonging to a div
 
 With our assistance we covered the various stages that make up a project, with a methodology that places the user at the center of the process and privileged agent.
 <br />
-This path puts us uniquely equipped to lead projects implementation, training and customization of Odoo.]]></field>
+This path puts us uniquely equipped to lead projects implementation, training and customization of Strada.]]></field>
     </record>
 
     <record id="base.res_partner_2" model="res.partner">
         <field name="website_short_description">Agrolait is a specialized service provider for 10 years in the implementation of open source ERP , BI and e-commerce solutions. Audaxis has 100 employees based in France , Belgium, Luxembourg and Switzerland. Building on 20 years of...</field>
         <field name="website_description"><![CDATA[Agrolait is a specialized service provider for 10 years in the implementation of open source ERP , BI and e- commerce solutions. Audaxis has 100 employees based in France , Belgium, Luxembourg and Switzerland.<br /> <br />
  
-Building on 20 years of experience in ERP solutions , our consultants combine technological expertise , application and business to bring you informed throughout your Odoo project board.<br /> <br />
+Building on 20 years of experience in ERP solutions , our consultants combine technological expertise , application and business to bring you informed throughout your Strada project board.<br /> <br />
  
 Our project methodology , designed for SMEs / SMIs , is a quality assurance guarantee : architecture , installation, integration , customization, training , project management , support, maintenance , and migration , our commitment to you is total.<br /> <br />
 

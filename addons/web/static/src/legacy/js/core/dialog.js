@@ -75,7 +75,7 @@ var Dialog = Widget.extend({
             this._opened = this.opened(this.on_attach_callback);
         }
         options = _.defaults(options || {}, {
-            title: _t('Odoo'), subtitle: '',
+            title: _t('Strada'), subtitle: '',
             size: 'large',
             fullscreen: false,
             dialogClass: '',

@@ -816,7 +816,7 @@ class WebsiteBinary(Binary):
 
     # TODO in master: move this route outside the WebsiteBinary class
     # if not icon provided in DOM, browser tries to access /favicon.ico, eg when opening an order pdf
-    @http.route(['/favicon.ico'], type='http', auth='public', website=True, multilang=False, sitemap=False)
+    @http.route(['/stradaicon.ico'], type='http', auth='public', website=True, multilang=False, sitemap=False)
     def favicon(self, **kw):
         website = request.website
         response = request.redirect(website.image_url(website, 'favicon'), code=301)
