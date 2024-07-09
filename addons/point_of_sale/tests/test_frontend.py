@@ -235,6 +235,10 @@ class TestPointOfSaleHttpCommon(AccountTestInvoicingHttpCommon):
             'name': 'Leather',
             'attribute_id': chair_fabrics_attribute.id,
         })
+        chair_fabrics_wool = env['product.attribute.value'].create({
+            'name': 'wool',
+            'attribute_id': chair_fabrics_attribute.id,
+        })
         chair_fabrics_other = env['product.attribute.value'].create({
             'name': 'Other',
             'attribute_id': chair_fabrics_attribute.id,
@@ -243,7 +247,7 @@ class TestPointOfSaleHttpCommon(AccountTestInvoicingHttpCommon):
         chair_fabrics_line = env['product.template.attribute.line'].create({
             'product_tmpl_id': configurable_chair.product_tmpl_id.id,
             'attribute_id': chair_fabrics_attribute.id,
-            'value_ids': [(6, 0, [chair_fabrics_leather.id, chair_fabrics_other.id])]
+            'value_ids': [(6, 0, [chair_fabrics_leather.id, chair_fabrics_wool.id, chair_fabrics_other.id])]
         })
         chair_color_line.product_template_value_ids[1].is_custom = True
 
@@ -570,8 +574,17 @@ class TestUi(TestPointOfSaleHttpCommon):
         self.assertEqual(n_paid, 2, 'There should be 2 paid order.')
 
     def test_04_product_configurator(self):
-        self.main_pos_config.with_user(self.pos_user).open_ui()
-        self.start_tour("/pos/ui?config_id=%d" % self.main_pos_config, 'ProductConfiguratorTour', login="pos_user")
+        # Making one attribute inactive to verify that it doesn't show
+        configurable_product = self.env['product.product'].search([('name', '=', 'Configurable Chair'), ('available_in_pos', '=', 'True')], limit=1)
+        fabrics_line = configurable_product.attribute_line_ids[2]
+        fabrics_line.product_template_value_ids[1].ptav_active = False
+
+        self.main_pos_config.with_user(self.pos_admin).open_ui()
+        self.start_tour("/pos/ui?config_id=%d" % self.main_pos_config, 'ProductConfiguratorTour', login="pos_admin")
+
+        paid_order = self.env['pos.order'].search([('state', '=', 'paid')])
+        self.assertEqual(len(paid_order), 1)
+        self.assertTrue('(Red, Metal, Other: Custom Fabric)' in paid_order.lines[0].full_product_name)
 
     def test_05_ticket_screen(self):
         if not loaded_demo_data(self.env):
@@ -1137,6 +1150,13 @@ class TestUi(TestPointOfSaleHttpCommon):
 
         self.main_pos_config.with_user(self.pos_user).open_ui()
         self.start_tour("/pos/ui?config_id=%d" % self.main_pos_config.id, 'MultiProductOptionsTour', login="pos_user")
+
+    def test_customer_display_as_public(self):
+        self.main_pos_config.iface_customer_facing_display = True
+        self.main_pos_config.iface_customer_facing_display_background_image_1920 = b'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGNgYGAAAAAEAAH2FzhVAAAAAElFTkSuQmCC'
+        response = self.url_open(f"/web/image/pos.config/{self.main_pos_config.id}/iface_customer_facing_display_background_image_1920")
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue('Shop.png' in response.headers['Content-Disposition'])
 
 # This class just runs the same tests as above but with mobile emulation
 class MobileTestUi(TestUi):

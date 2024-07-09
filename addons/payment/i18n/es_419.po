@@ -737,7 +737,7 @@ msgstr "Correo electrónico"
 #. module: payment
 #: model:ir.model.fields.selection,name:payment.selection__payment_provider__state__enabled
 msgid "Enabled"
-msgstr "Habilitado"
+msgstr "Activado"
 
 #. module: payment
 #: model_terms:ir.ui.view,arch_db:payment.payment_provider_kanban
@@ -1136,7 +1136,7 @@ msgstr "Operación"
 #: code:addons/payment/models/payment_method.py:0
 #, python-format
 msgid "Operation not supported."
-msgstr "La operación no es compatible."
+msgstr "Operación incompatible."
 
 #. module: payment
 #: model:ir.model.fields.selection,name:payment.selection__res_company__payment_onboarding_payment_method__other
@@ -1309,7 +1309,7 @@ msgstr "Métodos de pago"
 #: code:addons/payment/static/src/js/payment_form.js:0
 #, python-format
 msgid "Payment processing failed"
-msgstr "Fallo al procesar el pago"
+msgstr "Error al procesar el pago"
 
 #. module: payment
 #: model_terms:ir.ui.view,arch_db:payment.payment_provider_form
@@ -2128,7 +2128,7 @@ msgstr "Mensaje de advertencia"
 #: code:addons/payment/static/src/js/payment_form.js:0
 #, python-format
 msgid "Warning!"
-msgstr "¡Alerta!"
+msgstr "¡Advertencia!"
 
 #. module: payment
 #. odoo-javascript
@@ -2248,7 +2248,7 @@ msgstr ""
 #: model_terms:payment.provider,auth_msg:payment.payment_provider_xendit
 #, python-format
 msgid "Your payment has been authorized."
-msgstr "Se ha autorizado su pago."
+msgstr "Se autorizó su pago."
 
 #. module: payment
 #. odoo-python
@@ -2271,7 +2271,7 @@ msgstr "Se ha autorizado su pago."
 #: model_terms:payment.provider,cancel_msg:payment.payment_provider_xendit
 #, python-format
 msgid "Your payment has been cancelled."
-msgstr "Se ha cancelado su pago."
+msgstr "Se canceló su pago."
 
 #. module: payment
 #. odoo-python

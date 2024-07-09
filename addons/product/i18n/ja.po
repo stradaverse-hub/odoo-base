@@ -71,7 +71,7 @@ msgstr ""
 #: code:addons/product/models/product_pricelist_item.py:0
 #, python-format
 msgid "%(percentage)s %% discount and %(price)s surcharge"
-msgstr "%(percentage)s %% ディスカウントおよび %(price)s 追加料金"
+msgstr "%(percentage)s %% 値引および %(price)s 追加料金"
 
 #. module: product
 #. odoo-python
@@ -2114,6 +2114,10 @@ msgid ""
 "\n"
 "Invalid URL: %s"
 msgstr ""
+"有効なURLを入力して下さい。\n"
+"例: https://www.odoo.com\n"
+"\n"
+"無効なURL: %s"
 
 #. module: product
 #. odoo-python

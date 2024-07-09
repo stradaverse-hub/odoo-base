@@ -183,11 +183,20 @@ class StockWarehouseOrderpoint(models.Model):
         if self.route_id:
             self.qty_multiple = self._get_qty_multiple_to_order()
 
+    @api.model_create_multi
+    def create(self, vals_list):
+        if any(val.get('snoozed_until', False) and val.get('trigger', self.default_get(['trigger'])['trigger']) == 'auto' for val in vals_list):
+            raise UserError(_("You can not create a snoozed orderpoint that is not manually triggered."))
+        return super().create(vals_list)
+
     def write(self, vals):
         if 'company_id' in vals:
             for orderpoint in self:
                 if orderpoint.company_id.id != vals['company_id']:
                     raise UserError(_("Changing the company of this record is forbidden at this point, you should rather archive it and create a new one."))
+        if 'snoozed_until' in vals:
+            if any(orderpoint.trigger == 'auto' for orderpoint in self):
+                raise UserError(_("You can only snooze manual orderpoints. You should rather archive 'auto-trigger' orderpoints if you do not want them to be triggered."))
         return super().write(vals)
 
     def action_product_forecast_report(self):
@@ -277,11 +286,12 @@ class StockWarehouseOrderpoint(models.Model):
                 continue
             qty_to_order = 0.0
             rounding = orderpoint.product_uom.rounding
-            # We want to know how much we should order to also satisfy the needs that gonna appear in the next (visibility) days
-            product_context = orderpoint._get_product_context(visibility_days=orderpoint.visibility_days)
-            qty_forecast_with_visibility = orderpoint.product_id.with_context(product_context).read(['virtual_available'])[0]['virtual_available'] + orderpoint._quantity_in_progress()[orderpoint.id]
-
-            if float_compare(qty_forecast_with_visibility, orderpoint.product_min_qty, precision_rounding=rounding) < 0:
+            # The check is on purpose. We only want to consider the visibility days if the forecast is negative and
+            # there is a already something to ressuply base on lead times.
+            if float_compare(orderpoint.qty_forecast, orderpoint.product_min_qty, precision_rounding=rounding) < 0:
+                # We want to know how much we should order to also satisfy the needs that gonna appear in the next (visibility) days
+                product_context = orderpoint._get_product_context(visibility_days=orderpoint.visibility_days)
+                qty_forecast_with_visibility = orderpoint.product_id.with_context(product_context).read(['virtual_available'])[0]['virtual_available'] + orderpoint._quantity_in_progress()[orderpoint.id]
                 qty_to_order = max(orderpoint.product_min_qty, orderpoint.product_max_qty) - qty_forecast_with_visibility
                 remainder = orderpoint.qty_multiple > 0.0 and qty_to_order % orderpoint.qty_multiple or 0.0
                 if (float_compare(remainder, 0.0, precision_rounding=rounding) > 0
@@ -485,6 +495,7 @@ class StockWarehouseOrderpoint(models.Model):
                         'url': f'#action={action.id}&id={move.picking_id.id}&model=stock.picking&view_type=form'
                     }],
                     'sticky': False,
+                    'next': {'type': 'ir.actions.act_window_close'},
                 }
             }
         return False

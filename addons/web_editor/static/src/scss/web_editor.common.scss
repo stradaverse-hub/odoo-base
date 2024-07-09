@@ -90,6 +90,7 @@
     @include print-variable('h5-font-size', $h5-font-size);
     @include print-variable('h6-font-size', $h6-font-size);
     @include print-variable('font-size-base', $font-size-base);
+    @include print-variable('small-font-size', $small-font-size);
 }
 
 html, body {
@@ -292,7 +293,7 @@ img.ms-auto, img.mx-auto {
 // "o_small" class currently also changes the font-size only but this is to stay
 // consistent with the other classes which act that way (as display-x).
 .o_small-fs {
-    @extend %o-small-font-size;
+    @include font-size($small-font-size);
 }
 
 div.media_iframe_video {
@@ -977,7 +978,13 @@ section, .oe_img_bg, [data-oe-shape-data] {
 
 .o_editor_banner {
     // force margin to ensure vertical center alignment in correlation with icon
-    p, h1, h2, h3 {
+    p, h1, h2, h3, ul, ol {
         margin-bottom: 1rem;
+    }
+    ol ol, ul ul, ol ul, ul ol {
+        margin-bottom: 0;
+    }
+    ul.o_checklist>li:not(.oe-nested)::before {
+        top: 0px!important;
     }
 }

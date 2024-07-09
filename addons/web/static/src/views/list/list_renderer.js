@@ -20,6 +20,7 @@ import { useBounceButton } from "@web/views/view_hook";
 import { Widget } from "@web/views/widgets/widget";
 import { getFormattedValue } from "../utils";
 import { localization } from "@web/core/l10n/localization";
+import { uniqueId } from "@web/core/utils/functions";
 
 import {
     Component,
@@ -71,6 +72,26 @@ function containsActiveElement(parent) {
  */
 function getElementToFocus(cell, index) {
     return getTabableElements(cell).at(index) || cell;
+}
+
+/**
+ * Here be dragons. 🐉
+ * This is a workaround to avoid clipping issues in Firefox and Safari.
+ * cf. https://bugzilla.mozilla.org/show_bug.cgi?id=1887116
+ */
+class OptionalFieldsDropdown extends Dropdown {
+    static template = "web.ListRenderer.OptionalFieldsDropdown";
+    static props = {
+        ...Dropdown.props,
+        listRendererClass: String,
+    };
+
+    onWindowClicked(ev) {
+        if (ev.target.closest(".o_optional_columns_dropdown.o-dropdown--menu")) {
+            return;
+        }
+        super.onWindowClicked(...arguments);
+    }
 }
 
 export class ListRenderer extends Component {
@@ -199,6 +220,9 @@ export class ListRenderer extends Component {
             // OWL don't wait the patch for the children components if the children trigger a patch by himself.
             await Promise.resolve();
 
+            if (this.activeElement !== this.uiService.activeElement) {
+                return;
+            }
             const editedRecord = this.props.list.editedRecord;
             if (editedRecord && this.activeRowId !== editedRecord.id) {
                 if (this.cellToFocus && this.cellToFocus.record === editedRecord) {
@@ -215,6 +239,7 @@ export class ListRenderer extends Component {
             this.lastEditedCell = null;
         });
         this.isRTL = localization.direction === "rtl";
+        this.uniqueRendererClass = uniqueId("o_list_renderer_");
     }
 
     displaySaveNotification() {
@@ -305,9 +330,6 @@ export class ListRenderer extends Component {
 
         if (!this.columnWidths || !this.columnWidths.length) {
             // no column widths to restore
-
-            table.style.tableLayout = "fixed";
-            const allowedWidth = table.parentNode.getBoundingClientRect().width;
             // Set table layout auto and remove inline style to make sure that css
             // rules apply (e.g. fixed width of record selector)
             table.style.tableLayout = "auto";
@@ -320,7 +342,7 @@ export class ListRenderer extends Component {
 
             // Squeeze the table by applying a max-width on largest columns to
             // ensure that it doesn't overflow
-            this.columnWidths = this.computeColumnWidthsFromContent(allowedWidth);
+            this.columnWidths = this.computeColumnWidthsFromContent();
             table.style.tableLayout = "fixed";
         }
         headers.forEach((th, index) => {
@@ -353,7 +375,7 @@ export class ListRenderer extends Component {
         });
     }
 
-    computeColumnWidthsFromContent(allowedWidth) {
+    computeColumnWidthsFromContent() {
         const table = this.tableRef.el;
 
         // Toggle a className used to remove style that could interfere with the ideal width
@@ -384,6 +406,7 @@ export class ListRenderer extends Component {
         const sortedThs = [...table.querySelectorAll("thead th:not(.o_list_button)")].sort(
             (a, b) => getWidth(b) - getWidth(a)
         );
+        const allowedWidth = table.parentNode.getBoundingClientRect().width;
 
         let totalWidth = getTotalWidth();
         for (let index = 1; totalWidth > allowedWidth; index++) {
@@ -2137,7 +2160,7 @@ ListRenderer.rowsTemplate = "web.ListRenderer.Rows";
 ListRenderer.recordRowTemplate = "web.ListRenderer.RecordRow";
 ListRenderer.groupRowTemplate = "web.ListRenderer.GroupRow";
 
-ListRenderer.components = { DropdownItem, Field, ViewButton, CheckBox, Dropdown, Pager, Widget };
+ListRenderer.components = { DropdownItem, Field, ViewButton, CheckBox, Dropdown: OptionalFieldsDropdown, Pager, Widget };
 ListRenderer.props = [
     "activeActions?",
     "list",

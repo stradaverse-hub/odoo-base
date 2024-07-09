@@ -15,11 +15,13 @@
 # Sergey Vilizhanin, 2023
 # Максим Дронь <dronmax@gmail.com>, 2023
 # ILMIR <karamov@it-projects.info>, 2023
-# Collex100, 2023
 # Ivan Kropotkin <yelizariev@itpp.dev>, 2023
 # Martin Trigaux, 2023
 # Vasiliy Korobatov <korobatov@gmail.com>, 2023
 # Сергей Шебанин <sergey@shebanin.ru>, 2024
+# Collex100, 2024
+# Alexey Korepov <murznn@gmail.com>, 2024
+# Nadia Martynova, 2024
 # Wil Odoo, 2024
 # 
 msgid ""
@@ -1044,7 +1046,7 @@ msgstr "Можно опубликовать"
 #: code:addons/website_sale/controllers/main.py:0
 #, python-format
 msgid "You can't use a video as the product's main image."
-msgstr ""
+msgstr "Нельзя использовать видео в качестве основного изображения продукта."
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -1299,6 +1301,11 @@ msgstr "Компоненты"
 #: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
 msgid "Compute shipping cost and ship with Easypost"
 msgstr "Рассчитайте стоимость доставки и отправьте с помощью Easypost"
+
+#. module: website_sale
+#: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
+msgid "Compute shipping cost and ship with Shiprocket"
+msgstr ""
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
@@ -1638,7 +1645,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_delivery_carrier__website_description
 msgid "Description for Online Quotations"
-msgstr "Описание для онлайн-котировок"
+msgstr "Описание для Онлайн-предложения"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_product_product__website_description
@@ -2407,7 +2414,7 @@ msgstr "Line Subtotals Tax Display"
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_sale_order_line__linked_line_id
 msgid "Linked Order Line"
-msgstr "Связанная линия заказов"
+msgstr "Связанная позиция заказа"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.add_grid_or_list_option
@@ -2629,6 +2636,13 @@ msgstr ""
 "информации."
 
 #. module: website_sale
+#. odoo-python
+#: code:addons/website_sale/controllers/main.py:0
+#, python-format
+msgid "No shipping method is selected."
+msgstr ""
+
+#. module: website_sale
 #: model:ir.model.fields.selection,name:website_sale.selection__website__product_page_image_spacing__none
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "None"
@@ -2798,7 +2812,7 @@ msgstr "Дата заказа"
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_sale_order__website_order_line
 msgid "Order Lines displayed on Website"
-msgstr "Строки заказов отображаются на сайте"
+msgstr "Позиции заказов отображаются на сайте"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.cart
@@ -3696,6 +3710,16 @@ msgid "Shipping address"
 msgstr "Адрес доставки"
 
 #. module: website_sale
+#: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
+msgid "Shiprocket"
+msgstr "Корабельная ракета"
+
+#. module: website_sale
+#: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
+msgid "Shiprocket Shipping Methods"
+msgstr "Способы доставки Shiprocket"
+
+#. module: website_sale
 #: model:website.menu,name:website_sale.menu_shop
 #: model_terms:ir.ui.view,arch_db:website_sale.products
 msgid "Shop"
@@ -3965,7 +3989,7 @@ msgstr "Спасибо за ваш заказ."
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.brand_promotion
 msgid "The #1"
-msgstr "1 секунда"
+msgstr "Номер один"
 
 #. module: website_sale
 #. odoo-python
@@ -4711,7 +4735,7 @@ msgstr "магазин электронной коммерции"
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.header_cart_link
 msgid "eCommerce cart"
-msgstr ""
+msgstr "корзина электронной коммерции"
 
 #. module: website_sale
 #: model:ir.actions.server,name:website_sale.ir_cron_send_availability_email_ir_actions_server

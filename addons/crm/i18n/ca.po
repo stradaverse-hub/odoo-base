@@ -19,7 +19,6 @@
 # José Cabrera Lozano <jose.cabrera@edukative.es>, 2023
 # Carles Antoli <carlesantoli@hotmail.com>, 2023
 # Manel Fernandez Ramirez <manelfera@outlook.com>, 2023
-# Josep Anton Belchi, 2023
 # Martin Trigaux, 2023
 # CristianCruzParra, 2023
 # oscaryuu, 2023
@@ -28,6 +27,7 @@
 # marcescu, 2023
 # Quim - eccit <quim@eccit.com>, 2023
 # Iván Infantes Castarnado, 2024
+# Josep Anton Belchi, 2024
 # Santiago Payà <santiagopim@gmail.com>, 2024
 # 
 msgid ""
@@ -537,7 +537,7 @@ msgstr "Nom del domini d'àlies"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_team__alias_full_name
 msgid "Alias Email"
-msgstr ""
+msgstr "Pseudònim de correu"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_team__alias_name
@@ -3568,7 +3568,7 @@ msgstr "2a adreça"
 #: code:addons/crm/models/crm_lead.py:0
 #, python-format
 msgid "Subject: "
-msgstr ""
+msgstr "Assumpte:"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_activity_report__subtype_id
