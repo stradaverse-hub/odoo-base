@@ -723,6 +723,12 @@ class AccountAccount(models.Model):
 
         return super(AccountAccount, self).write(vals)
 
+    def _load_records_write(self, values):
+        if 'prefix' in values:
+            del values['code_digits']
+            del values['prefix']
+        super()._load_records_write(values)
+
     @api.ondelete(at_uninstall=False)
     def _unlink_except_contains_journal_items(self):
         if self.env['account.move.line'].search([('account_id', 'in', self.ids)], limit=1):
@@ -958,13 +964,13 @@ class AccountGroup(models.Model):
                    AND parent.id != child.id
                    AND parent.company_id = child.company_id
                  WHERE child.company_id IN %s
-                   AND child.parent_id IS DISTINCT FROM parent.id -- IMPORTANT avoid to update if nothing changed
               ORDER BY child.id, char_length(parent.code_prefix_start) DESC
             )
             UPDATE account_group child
                SET parent_id = relation.parent_id
               FROM relation
              WHERE child.id = relation.child_id
+               AND child.parent_id IS DISTINCT FROM relation.parent_id
          RETURNING child.id
         """, tuple(company_ids))
         self.env.cr.execute(query)
