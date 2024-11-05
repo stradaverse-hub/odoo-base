@@ -441,8 +441,8 @@ msgstr "9951 - San Marino VAT number"
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__9952
-msgid "9952 - Turkey VAT number"
-msgstr "9952 - Turkey VAT number"
+msgid "9952 - Türkiye VAT number"
+msgstr "9952 - Steuernummer für Türkei"
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__9953
@@ -568,7 +568,7 @@ msgstr "Unternehmen"
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_move_send__show_ubl_company_warning
 msgid "Company warning"
-msgstr ""
+msgstr "Warnung an Unternehmen"
 
 #. module: account_edi_ubl_cii
 #. odoo-python
@@ -770,7 +770,7 @@ msgstr "Odoo"
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_move_send__ubl_partner_warning
 msgid "Partner warning"
-msgstr ""
+msgstr "Warnung an Partner"
 
 #. module: account_edi_ubl_cii
 #. odoo-python

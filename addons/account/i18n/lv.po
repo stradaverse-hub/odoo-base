@@ -10,15 +10,15 @@
 # Konstantins Zabogonskis <inculin4ik@gmail.com>, 2023
 # Arnis Putniņš <arnis@allegro.lv>, 2024
 # ievaputnina <ievai.putninai@gmail.com>, 2024
-# Will Sensors, 2024
 # Martin Trigaux, 2024
+# Will Sensors, 2024
 # Armīns Jeltajevs <armins.jeltajevs@gmail.com>, 2024
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0\n"
+"Project-Id-Version: Odoo Server 17.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 10:26+0000\n"
+"POT-Creation-Date: 2024-09-06 12:08+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
 "Last-Translator: Armīns Jeltajevs <armins.jeltajevs@gmail.com>, 2024\n"
 "Language-Team: Latvian (https://app.transifex.com/odoo/teams/41243/lv/)\n"
@@ -39,6 +39,11 @@ msgid ""
 "The total of debits equals %s and the total of credits equals %s.\n"
 "You might want to specify a default account on journal \"%s\" to automatically balance each move."
 msgstr ""
+"\n"
+"\n"
+"Gājiens (%s) nav līdzsvarots.\n"
+"Debetu kopsumma ir vienāda ar %s un kredītu kopsumma ir vienāda ar %s.\n"
+"Iespējams, jūs vēlaties norādīt noklusējuma kontu žurnālā \"%s\", lai automātiski sabalansētu katru kustību."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_tax__amount_type
@@ -1553,6 +1558,20 @@ msgstr ""
 "lai to atļautu."
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of payable type, but is used in a sale operation."
+msgstr ""
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of receivable type, but is used in a purchase operation."
+msgstr ""
+
+#. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings__module_account_avatax
 msgid "Account Avatax"
 msgstr "Konts Avatax"
@@ -1895,6 +1914,11 @@ msgstr ""
 "datumu līdz šodienai"
 
 #. module: account
+#: model:res.groups,name:account.group_account_manager
+msgid "Accountant"
+msgstr ""
+
+#. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings__module_account_accountant
 #: model:ir.ui.menu,name:account.account_account_menu
 #: model:ir.ui.menu,name:account.menu_finance_entries
@@ -1949,22 +1973,22 @@ msgstr "Grāmatvedības atskaite"
 #. module: account
 #: model:ir.model,name:account.model_account_report_column
 msgid "Accounting Report Column"
-msgstr "Grāmatvedības pārskata sleja"
+msgstr "Grāmatvedības atskaites kolonna"
 
 #. module: account
 #: model:ir.model,name:account.model_account_report_expression
 msgid "Accounting Report Expression"
-msgstr "Grāmatvedības pārskata izteikšana"
+msgstr "Grāmatvedības atskaites izteikšana"
 
 #. module: account
 #: model:ir.model,name:account.model_account_report_external_value
 msgid "Accounting Report External Value"
-msgstr "Grāmatvedības pārskats Ārējā vērtība"
+msgstr "Grāmatvedības atskaites ārējā vērtība"
 
 #. module: account
 #: model:ir.model,name:account.model_account_report_line
 msgid "Accounting Report Line"
-msgstr "Grāmatvedības pārskata līnija"
+msgstr "Grāmatvedības atskaites rinda"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_move_line_form
@@ -3378,7 +3402,6 @@ msgid "Billing"
 msgstr "Norēķini"
 
 #. module: account
-#: model:res.groups,name:account.group_account_manager
 msgid "Billing Administrator"
 msgstr "Norēķinu administrators"
 
@@ -3429,6 +3452,11 @@ msgstr "Tukšs ja ir nulle"
 #: model:ir.model.fields.selection,name:account.selection__res_partner__invoice_warn__block
 msgid "Blocking Message"
 msgstr "Bloķēšanas ziņa"
+
+#. module: account
+#: model:res.groups,name:account.group_account_user
+msgid "Bookkeeper"
+msgstr ""
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_report_column__figure_type__boolean
@@ -6936,6 +6964,13 @@ msgstr "Formula"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_report_expression__carryover_target
+msgid ""
+"Formula in the form line_code.expression_label. This allows setting the "
+"target of the carryover for this expression (on a _carryover_*-labeled "
+"expression), in case it is different from the parent line."
+msgstr ""
+
+#. module: account
 msgid ""
 "Formula in the form line_code.expression_label. This allows setting the "
 "target of the carryover for this expression (on a _carryover_*-labeled "
@@ -11698,6 +11733,11 @@ msgid "Re-Sequence"
 msgstr "Pārkārtot"
 
 #. module: account
+#: model:res.groups,name:account.group_account_readonly
+msgid "Read-only"
+msgstr ""
+
+#. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_reversal__reason
 msgid "Reason displayed on Credit Note"
 msgstr "Kredīta paziņojumā norādītais iemesls"
@@ -13005,7 +13045,6 @@ msgstr ""
 "arī tiks nosaukti, izmantojot šo prefiksu."
 
 #. module: account
-#: model:res.groups,name:account.group_account_readonly
 msgid "Show Accounting Features - Readonly"
 msgstr "Rādīt grāmatvedības funkcijas - tikai lasāmās versijas"
 
@@ -13040,7 +13079,6 @@ msgid "Show Force Tax Included"
 msgstr "Rādīt Spēka nodoklis iekļauts"
 
 #. module: account
-#: model:res.groups,name:account.group_account_user
 msgid "Show Full Accounting Features"
 msgstr "Rādīt pilnas grāmatvedības funkcijas"
 
@@ -13936,6 +13974,15 @@ msgstr ""
 "%(date_field)s (%(date)s) nesakrīt ar saistītā %(model)s (%(sequence)s) kārtas numuru\n"
 "Lai turpinātu, jums būs jādzēš %(model)s %(sequence_field)s.\n"
 "To darot, jūs, iespējams, vēlēsieties mainīt ierakstu secību, lai saglabātu nepārtrauktu secību pēc datuma."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"The Availability is set to 'Country Matches' but the field Country is not "
+"set."
+msgstr ""
 
 #. module: account
 #. odoo-python
@@ -15261,6 +15308,14 @@ msgstr ""
 
 #. module: account
 #. odoo-python
+#: code:addons/account/models/account_journal.py:0
+#, python-format
+msgid ""
+"This journal is associated with a payment method. You cannot archive it"
+msgstr ""
+
+#. module: account
+#. odoo-python
 #: code:addons/account/models/company.py:0
 #, python-format
 msgid "This journal is not in strict mode."
@@ -15830,6 +15885,13 @@ msgstr "Vienības cena:"
 #: model:ir.model.fields,field_description:account.field_account_move_line__product_uom_id
 msgid "Unit of Measure"
 msgstr "Mērvienība"
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/template_generic_coa.py:0
+#, python-format
+msgid "United States of America (Generic)"
+msgstr ""
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_form
@@ -16463,6 +16525,15 @@ msgid ""
 msgstr ""
 "Ja ir atzīmēta izvēles rūtiņa, 0 vērtības netiks rādītas, parādot šīs "
 "izteiksmes vērtību."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"When targeting an expression for carryover, the label of that expression "
+"must start with _applied_carryover_"
+msgstr ""
 
 #. module: account
 #: model_terms:ir.actions.act_window,help:account.action_move_in_receipt_type
@@ -17258,6 +17329,15 @@ msgstr "Nevarat izmantot novecojušu kontu."
 #, python-format
 msgid "You cannot use taxes on lines with an Off-Balance account"
 msgstr "Jūs nevarat izmantot nodokļus rindās ar ārpusbilances kontu"
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"You cannot use the field carryover_target in an expression that does not "
+"have the label starting with _carryover_"
+msgstr ""
 
 #. module: account
 #. odoo-python

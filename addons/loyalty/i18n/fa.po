@@ -1493,7 +1493,7 @@ msgstr "قلمرو محصول"
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_reward__reward_product_tag_id
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_rule__product_tag_id
 msgid "Product Tag"
-msgstr ""
+msgstr "برچسب محصول"
 
 #. module: loyalty
 #: model:ir.model,name:loyalty.model_product_product
@@ -1552,7 +1552,7 @@ msgstr ""
 #: code:addons/loyalty/models/loyalty_program.py:0
 #, python-format
 msgid "Promo Code"
-msgstr ""
+msgstr "کد تبلیغاتی"
 
 #. module: loyalty
 #. odoo-python
@@ -1580,7 +1580,7 @@ msgstr "برنامه تبلیغاتی"
 #. module: loyalty
 #: model:ir.model.fields.selection,name:loyalty.selection__loyalty_program__program_type__promotion
 msgid "Promotions"
-msgstr ""
+msgstr "تبلیغات"
 
 #. module: loyalty
 #: model:ir.model.fields,field_description:loyalty.field_loyalty_generate_wizard__coupon_qty

@@ -606,6 +606,9 @@ msgid ""
 "            Kenya eTIMS Device EDI Integration\n"
 "        "
 msgstr ""
+"\n"
+"            케냐 eTIMS 디바이스 EDI 통합\n"
+"        "
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_ke_edi_oscu_stock
@@ -614,6 +617,9 @@ msgid ""
 "            Kenya eTIMS Device EDI Stock Integration\n"
 "        "
 msgstr ""
+"\n"
+"            케냐 eTIMS 디바이스 EDI 재고 통합\n"
+"        "
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_ke_edi_oscu_mrp
@@ -622,6 +628,9 @@ msgid ""
 "        Kenya eTIMS Device EDI Manufacturing Integration\n"
 "    "
 msgstr ""
+"\n"
+"        케냐 eTIMS 디바이스 EDI 제조 통합\n"
+"    "
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_sa_edi_pos
@@ -677,6 +686,9 @@ msgid ""
 "* Submit e-invoices to the NAV (Hungarian Tax Agency) as part of the invoicing process.\n"
 "* Perform the Tax Audit Export (Adóhatósági Ellenőrzési Adatszolgáltatás) in NAV 3.0 format.\n"
 msgstr ""
+"\n"
+"* 인보이스 발행 프로세스의 일부로 NAV(헝가리 국세청)에 전자 인보이스를 제출합니다.\n"
+"* NAV 3.0 형식의 세무 감사 내보내기(Adóhatósági Ellenőrzési Adatszolgáltatás)를 수행합니다.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_timesheet_grid
@@ -1067,6 +1079,9 @@ msgid ""
 "Accounting Asset for India\n"
 "================================\n"
 msgstr ""
+"\n"
+"인도 회계 자산\n"
+"================================\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_au_hr_payroll_account
@@ -1322,6 +1337,8 @@ msgid ""
 "\n"
 "Accounting Reports for Nigeria\n"
 msgstr ""
+"\n"
+"나이지리아 회계 보고서\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_hu
@@ -1349,6 +1366,8 @@ msgid ""
 "\n"
 "Accounting reports for Bangladesh\n"
 msgstr ""
+"\n"
+"방글라데시 회계 보고서\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_be_reports
@@ -1700,6 +1719,8 @@ msgid ""
 "\n"
 "Accounting reports for Rwanda\n"
 msgstr ""
+"\n"
+"르완다 회계 보고서\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_rs_reports
@@ -1773,6 +1794,8 @@ msgid ""
 "\n"
 "Accounting reports for Tanzania\n"
 msgstr ""
+"\n"
+"탄자니아 회계 보고서\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_th_reports
@@ -1802,10 +1825,8 @@ msgstr ""
 #: model:ir.module.module,description:base.module_l10n_tr_reports
 msgid ""
 "\n"
-"Accounting reports for Turkey\n"
+"Accounting reports for Türkiye\n"
 msgstr ""
-"\n"
-"튀르키예 회계 보고서\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_uk_reports
@@ -2080,12 +2101,14 @@ msgid ""
 "\n"
 "Add support for the Declaration of Intent (Dichiarazione di Intento) to the Italian localization.\n"
 msgstr ""
+"\n"
+"이탈리아어 로컬라이제이션에 의향서(Dichiarazione di Intento) 지원을 추가합니다.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_fr_facturx_chorus_pro
 msgid ""
 "\n"
-"Add supports to fill three optional fields used when using Chorus Pro, especially when invoicing public services.\n"
+"Add support to fill three optional fields used when using Chorus Pro, especially when invoicing public services.\n"
 msgstr ""
 "\n"
 "Chorus Pro를 사용할 경우, 특히 공공 서비스 부문에 대한 청구서 발송 시 사용되는 세 가지 선택 항목을 채우기 위한 지원을 추가합니다.\n"
@@ -3483,6 +3506,10 @@ msgid ""
 "- Exported goods (COMEX).\n"
 "- Extended address fields.\n"
 msgstr ""
+"\n"
+"배송 가이드 3,0 버전 확장을 위한 연결 모듈 (Complemento XML Carta de Porte).\n"
+"- 수출품 (COMEX).\n"
+"- 주소 확장 필드.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_mx_edi_stock_extended
@@ -4224,7 +4251,14 @@ msgid ""
 "=========================================================================================\n"
 "\n"
 "German accounting chart and localization.\n"
+"By default, the audit trail is enabled for GoBD compliance.\n"
 msgstr ""
+"\n"
+"이 모듈에는 SKR03 또는 SKR04를 기반으로 하는 독일 계정 차트가 포함되어 있습니다.\n"
+"=========================================================================================\n"
+"\n"
+"German accounting chart and localization.\n"
+"By default, the audit trail is enabled for GoBD compliance.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_be_disallowed_expenses
@@ -5946,6 +5980,11 @@ msgid ""
 "\n"
 "This module enables users to create E-waybill from Inventory App without generating an invoice\n"
 msgstr ""
+"\n"
+"재고용 인도 전자 운송장\n"
+"==========================\n"
+"\n"
+"This module enables users to create E-waybill from Inventory App without generating an invoice\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_in_hr_payroll
@@ -6000,6 +6039,9 @@ msgid ""
 "Intrastat for Denmark\n"
 "=====================\n"
 msgstr ""
+"\n"
+"덴마크 Intrastat\n"
+"=====================\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_account_avatax_stock
@@ -7394,6 +7436,9 @@ msgid ""
 "Nigerian localization.\n"
 "=========================================================\n"
 msgstr ""
+"\n"
+"나이지리아 현지화.\n"
+"=========================================================\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_no_saft
@@ -7874,6 +7919,8 @@ msgid ""
 "\n"
 "Provides the option to add the prorata deduction to the VAT export\n"
 msgstr ""
+"\n"
+"VAT 수출에 비례 배분 공제를 포함할 수 있는 옵션을 제공합니다.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_customer
@@ -8076,6 +8123,12 @@ msgid ""
 "- Tax report\n"
 "- Fiscal position\n"
 msgstr ""
+"\n"
+"르완다어 현지화가 포함되어 있습니다:\n"
+"- COA\n"
+"- 세금\n"
+"- 세금 신고\n"
+"- 재정 상태\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_nl_reports_sbr_icp
@@ -8111,6 +8164,10 @@ msgid ""
 "=================================\n"
 "Adds the missing field for a correct exchange through SBR\n"
 msgstr ""
+"\n"
+"SBR 네덜란드 현지화 OB 번호\n"
+"=================================\n"
+"Adds the missing field for a correct exchange through SBR\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_nl_reports_sbr_status_info
@@ -8120,6 +8177,10 @@ msgid ""
 "==================================================\n"
 "Adds the service that will check on the status of a submitted report to Digipoort\n"
 msgstr ""
+"\n"
+"SBR 네덜란드 현지화 상태 정보 서비스\n"
+"==================================================\n"
+"Adds the service that will check on the status of a submitted report to Digipoort\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_mass_mailing_event_sms
@@ -8475,6 +8536,8 @@ msgid ""
 "\n"
 "Support for Indian TDS (Tax Deducted at Source).\n"
 msgstr ""
+"\n"
+"인도 TDS(원천 공제 세금) 지원.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_se
@@ -8500,6 +8563,9 @@ msgid ""
 "Swiss POS Localization\n"
 "=======================================================\n"
 msgstr ""
+"\n"
+"스위스 POS 현지화\n"
+"=======================================================\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_ch
@@ -8582,6 +8648,12 @@ msgid ""
 "- Tax report\n"
 "- Fiscal position\n"
 msgstr ""
+"\n"
+"탄자니아 현지화가 포함되어 있습니다:\n"
+"- COA\n"
+"- 세금\n"
+"- 세금 신고\n"
+"- 재정 상태\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_mrp_product_expiry
@@ -8632,6 +8704,8 @@ msgid ""
 "\n"
 "The UBL PINT e-invoicing format for Malaysia is based on the Peppol International (PINT) model for Billing.\n"
 msgstr ""
+"\n"
+"말레이시아의 UBL PINT 전자 청구서 형식은 청구용 국제 Peppol (PINT) 모델을 기반으로 합니다.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_repair
@@ -9275,6 +9349,13 @@ msgid ""
 "    - Fiscal positions\n"
 "    - Default settings\n"
 msgstr ""
+"\n"
+"다음은 Odoo에서 모리셔스 공화국의 회계 차트를 관리하기 위한 기본 모듈입니다.\n"
+"==============================================================================================\n"
+"    - 계정과목표\n"
+"    - 세금\n"
+"    - 재정 상태\n"
+"    - 기본 설정\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_ug
@@ -9887,6 +9968,8 @@ msgid ""
 "\n"
 "This module allows ecommerce users to book an order with the shiprocket using cash on delivery feature.\n"
 msgstr ""
+"\n"
+"이 모듈을 사용하면 이커머스 사용자가 배송 시 현금 결제 기능을 사용하여 Shiprocket에서 주문을 예약할 수 있습니다.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_sale_ups
@@ -10078,6 +10161,10 @@ msgid ""
 "This is typically useful after some legal changes were done on the tax report,\n"
 "requiring a new tax configuration.\n"
 msgstr ""
+"\n"
+"이 모듈을 사용하면 기존 회계 항목의 세금 격자를 쉽게 업데이트할 수 있습니다.\n"
+"디버그 모드에서는 항목의 세금 표를 업데이트하는 버튼이 회계 설정에 나타납니다. \n"
+"이 기능은 세금 보고서의 법적 변경으로 인해 새로운 세금 구성이 필요한 경우에 특히 유용합니다.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_mrp_subonctracting_landed_costs
@@ -10636,6 +10723,12 @@ msgid ""
 "The Chart of Accounts is from SYSCOHADA.\n"
 "\n"
 msgstr ""
+"\n"
+"이 모듈은 베냉의 세금 시스템을 구현합니다.\n"
+"=================================================================\n"
+"\n"
+"The Chart of Accounts is from SYSCOHADA.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_bf
@@ -10647,6 +10740,12 @@ msgid ""
 "The Chart of Accounts is from SYSCOHADA.\n"
 "\n"
 msgstr ""
+"\n"
+"이 모듈은  부르키나파소의 세금 시스템을 구현합니다.\n"
+"=================================================================\n"
+"\n"
+"계정과목표는 YSCOHADA을 사용합니다.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_cm
@@ -10658,6 +10757,12 @@ msgid ""
 "The Chart of Accounts is from SYSCOHADA.\n"
 "\n"
 msgstr ""
+"\n"
+"이 모듈은 카메룬의 세금 시스템을 구현합니다.\n"
+"===========================================================\n"
+"\n"
+"계정과목표는 YSCOHADA을 사용합니다.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_cf
@@ -10669,6 +10774,12 @@ msgid ""
 "The Chart of Accounts is from SYSCOHADA.\n"
 "\n"
 msgstr ""
+"\n"
+"이 모듈은  중앙아프리카공화국의 세금 시스템을 구현합니다.\n"
+"=================================================================\n"
+"\n"
+"계정과목표는 YSCOHADA을 사용합니다.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_km
@@ -10680,6 +10791,12 @@ msgid ""
 "The Chart of Accounts is from SYSCOHADA.\n"
 "\n"
 msgstr ""
+"\n"
+"이 모듈은  코모로의 세금 시스템을 구현합니다.\n"
+"=================================================================\n"
+"\n"
+"계정과목표는 YSCOHADA을 사용합니다.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_cg
@@ -10691,6 +10808,12 @@ msgid ""
 "The Chart of Accounts is from SYSCOHADA.\n"
 "\n"
 msgstr ""
+"\n"
+"이 모듈은 콩고의 세금 시스템을 구현합니다.\n"
+"===========================================================\n"
+"\n"
+"계정과목표는 YSCOHADA을 사용합니다.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_ga
@@ -10702,6 +10825,12 @@ msgid ""
 "The Chart of Accounts is from SYSCOHADA.\n"
 "\n"
 msgstr ""
+"\n"
+"이 모듈은 가봉의 세금 시스템을 구현합니다.\n"
+"=================================================================\n"
+"\n"
+"계정과목표는 YSCOHADA을 사용합니다.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_gq
@@ -10713,6 +10842,12 @@ msgid ""
 "The Chart of Accounts is from SYSCOHADA.\n"
 "\n"
 msgstr ""
+"\n"
+"이 모듈은 적도 기니의 세금 시스템을 구현합니다.\n"
+"=================================================================\n"
+"\n"
+"계정과목표는 YSCOHADA을 사용합니다.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_gw
@@ -10724,6 +10859,12 @@ msgid ""
 "The Chart of Accounts is from SYSCOHADA.\n"
 "\n"
 msgstr ""
+"\n"
+"이 모듈은 적도 기니비사우의 세금 시스템을 구현합니다.\n"
+"=================================================================\n"
+"\n"
+"계정과목표는 YSCOHADA을 사용합니다.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_gn
@@ -10735,6 +10876,12 @@ msgid ""
 "The Chart of Accounts is from SYSCOHADA.\n"
 "\n"
 msgstr ""
+"\n"
+"이 모듈은 기니의 세금 시스템을 구현합니다.\n"
+"===========================================================\n"
+"\n"
+"계정과목표는 YSCOHADA을 사용합니다.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_ml
@@ -10746,6 +10893,12 @@ msgid ""
 "The Chart of Accounts is from SYSCOHADA.\n"
 "\n"
 msgstr ""
+"\n"
+"이 모듈은 말리의 세금 시스템을 구현합니다.\n"
+"=================================================================\n"
+"\n"
+"계정과목표는 YSCOHADA을 사용합니다.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_ne
@@ -10757,6 +10910,12 @@ msgid ""
 "The Chart of Accounts is from SYSCOHADA.\n"
 "\n"
 msgstr ""
+"\n"
+"이 모듈은 니제르의 세금 시스템을 구현합니다.\n"
+"=================================================================\n"
+"\n"
+"계정과목표는 YSCOHADA을 사용합니다.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_td
@@ -10768,6 +10927,12 @@ msgid ""
 "The Chart of Accounts is from SYSCOHADA.\n"
 "\n"
 msgstr ""
+"\n"
+"이 모듈은 차드의 세금 시스템을 구현합니다.\n"
+"=================================================================\n"
+"\n"
+"계정과목표는 YSCOHADA을 사용합니다.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_tg
@@ -10779,6 +10944,12 @@ msgid ""
 "The Chart of Accounts is from SYSCOHADA.\n"
 "\n"
 msgstr ""
+"\n"
+"이 모듈은 토고의 세금 시스템을 구현합니다.\n"
+"===========================================================\n"
+"\n"
+"계정과목표는 YSCOHADA을 사용합니다.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_cd
@@ -10790,6 +10961,12 @@ msgid ""
 "The Chart of Accounts is from SYSCOHADA.\n"
 "\n"
 msgstr ""
+"\n"
+"이 모듈은  콩고민주공화국의 세금 시스템을 구현합니다.\n"
+"===========================================================================\n"
+"\n"
+"계정과목표는 YSCOHADA을 사용합니다.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_ci
@@ -10801,6 +10978,12 @@ msgid ""
 "The Chart of Accounts is from SYSCOHADA.\n"
 "\n"
 msgstr ""
+"\n"
+"이 모듈은 코트디부아르의 세금 시스템을 구현합니다.\n"
+"=================================================================\n"
+"\n"
+"계정과목표는 YSCOHADA을 사용합니다.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_sn
@@ -10812,6 +10995,12 @@ msgid ""
 "The Chart of Accounts is from SYSCOHADA.\n"
 "\n"
 msgstr ""
+"\n"
+"이 모듈은 세네갈의 세금 시스템을 구현합니다.\n"
+"=================================================================\n"
+"\n"
+"계정과목표는 YSCOHADA을 사용합니다.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_base_iban
@@ -10865,6 +11054,8 @@ msgid ""
 "\n"
 "This module integrates with the Kenyan OSCU eTIMS device.\n"
 msgstr ""
+"\n"
+"이 모듈은 케냐 OSCU eTIMS 기기와 통합됩니다.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_ke_edi_oscu_mrp
@@ -10872,6 +11063,8 @@ msgid ""
 "\n"
 "This module integrates with the Kenyan eTIMS device (OSCU).\n"
 msgstr ""
+"\n"
+"이 모듈은 케냐 eTIMS 기기 (OSCU)와 통합됩니다.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_ke_edi_oscu_stock
@@ -10879,6 +11072,8 @@ msgid ""
 "\n"
 "This module integrates with the Kenyan eTIMS device. (OSCU)\n"
 msgstr ""
+"\n"
+"이 모듈은 케냐 eTIMS 기기와 통합됩니다. (OSCU)\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_de_audit_trail
@@ -11326,7 +11521,7 @@ msgid ""
 "    * Defines the default taxes\n"
 "    * Defines default tax report\n"
 "\n"
-"This was done in collaboration with Broadmax Partner in Turkey.\n"
+"This was done in collaboration with Broadmax Partner in Türkiye.\n"
 msgstr ""
 
 #. module: base
@@ -13560,7 +13755,7 @@ msgstr "무단 또는 무효 회사에 대한 액세스"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_update_tax_tags
 msgid "Account - Allow updating tax grids"
-msgstr ""
+msgstr "계정 - 세금 그리드 업데이트 허용"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_audit_trail
@@ -13666,7 +13861,7 @@ msgstr "Winbooks 계정 가져 오기"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_accountant_check_printing
 msgid "Account accountant check printing"
-msgstr ""
+msgstr "회계사 수표 인쇄"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_partner_bank__acc_holder_name
@@ -14398,7 +14593,7 @@ msgstr ""
 msgid ""
 "Adds the use of a service checking the status of the submitted documents to "
 "Digipoort"
-msgstr ""
+msgstr "Digipoort로 제출된 문서의 상태를 확인할 수 있는 서비스를 구현합니다."
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_administration
@@ -14605,7 +14800,7 @@ msgstr "저장 가능 품목에 대해 반복 주문을 생성하는 것을 허�
 #. module: base
 #: model:ir.module.module,summary:base.module_account_update_tax_tags
 msgid "Allow updating tax grids on existing entries"
-msgstr ""
+msgstr "기존 항목의 세금 계산서 그리드 업데이트 허용"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
@@ -14690,7 +14885,7 @@ msgstr "조정 항목을 일괄 결제 기능과 함께 사용할 수 있습니�
 #. module: base
 #: model:ir.module.module,summary:base.module_account_accountant_check_printing
 msgid "Allows using Reconciliation with the account check printing."
-msgstr ""
+msgstr "계정 수표 인쇄와 함께 조정 기능을 사용할 수 있습니다."
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_delivery_sendcloud
@@ -15587,12 +15782,12 @@ msgstr "방글라데시"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_bd
 msgid "Bangladesh - Accounting"
-msgstr ""
+msgstr "방글라데시 - 회계"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_bd_reports
 msgid "Bangladesh - Accounting Reports"
-msgstr ""
+msgstr "방글라데시 - 회계 보고서"
 
 #. module: base
 #: model:ir.model,name:base.model_res_bank
@@ -15913,7 +16108,7 @@ msgstr "벨기에 - 회계 보고서 (발행 마법사)"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_be_reports_prorata
 msgid "Belgium - Accounting Reports - Prorata Deduction"
-msgstr ""
+msgstr "벨기에 - 회계 보고서 - 비례 공제"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_be_reports_sms
@@ -15985,7 +16180,7 @@ msgstr "베닌"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_bj
 msgid "Benin - Accounting"
-msgstr ""
+msgstr "베냉 - 회계"
 
 #. module: base
 #: model:res.country,name:base.bm
@@ -16171,7 +16366,7 @@ msgstr "브라질 - 판매"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_br_sale_subscription
 msgid "Brazil - Sale Subscription"
-msgstr ""
+msgstr "브라질 - 판매 구독"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_br_website_sale
@@ -16454,7 +16649,7 @@ msgstr "부르키나 파소"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_bf
 msgid "Burkina Faso - Accounting"
-msgstr ""
+msgstr "부르키나파소 - 회계"
 
 #. module: base
 #: model:res.country,name:base.bi
@@ -16589,7 +16784,7 @@ msgstr "카메룬"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_cm
 msgid "Cameroon - Accounting"
-msgstr ""
+msgstr "카메룬 - 회계"
 
 #. module: base
 #. odoo-python
@@ -16767,7 +16962,7 @@ msgstr "중앙 아프리카 공화국"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_cf
 msgid "Central African Republic - Accounting"
-msgstr ""
+msgstr "중앙 아프리카 공화국 - 회계"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_hr
@@ -17296,7 +17491,7 @@ msgstr "코모로"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_km
 msgid "Comoros - Accounting"
-msgstr ""
+msgstr "코모로 - 회계"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_res_company_form
@@ -17603,7 +17798,7 @@ msgstr "콩고"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_cg
 msgid "Congo - Accounting"
-msgstr ""
+msgstr "콩고 - 회계"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_hw_drivers
@@ -19060,7 +19255,7 @@ msgstr "콩고민주공화국"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_cd
 msgid "Democratic Republic of the Congo - Accounting"
-msgstr ""
+msgstr "콩고민주공화국 - 회계"
 
 #. module: base
 #: model:res.country,name:base.dk
@@ -19090,7 +19285,7 @@ msgstr "덴마크 - 전자 청구서"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_dk_intrastat
 msgid "Denmark - Intrastat"
-msgstr ""
+msgstr "덴마크 - Intrastat"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_dk_saft_import
@@ -19854,7 +20049,7 @@ msgstr "에콰도르 회계 보고서"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ec_edi_pos
 msgid "Ecuadorian Point of Sale"
-msgstr ""
+msgstr "에콰도르 POS"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ec_website_sale
@@ -21316,7 +21511,7 @@ msgstr ""
 #: model:ir.module.module,summary:base.module_l10n_nl_reports_sbr_ob_nummer
 msgid ""
 "Fix to add the omzetbelastingnummer in Dutch Localization for SBR documents"
-msgstr ""
+msgstr "SBR 문서의 네덜란드어 현지화에서 omzetbelastingnummer를 추가하도록 수정했습니다."
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_module_module__icon_flag
@@ -21734,7 +21929,7 @@ msgstr "가봉"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ga
 msgid "Gabon - Accounting"
-msgstr ""
+msgstr "가봉 - 회계"
 
 #. module: base
 #: model:res.country,name:base.gm
@@ -22211,12 +22406,12 @@ msgstr "기니"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_gn
 msgid "Guinea - Accounting"
-msgstr ""
+msgstr "기니 - 회계"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_gq
 msgid "Guinea Equatorial - Accounting"
-msgstr ""
+msgstr "적도 기니 - 회계"
 
 #. module: base
 #: model:res.country,name:base.gw
@@ -22226,7 +22421,7 @@ msgstr "기니-비사우"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_gw
 msgid "Guinea-Bissau - Accounting"
-msgstr ""
+msgstr "기니비사우 - 회계"
 
 #. module: base
 #: model:res.country.group,name:base.gulf_cooperation_council
@@ -22751,7 +22946,7 @@ msgstr "헝가리 - 회계 보고서"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_hu_edi
 msgid "Hungary - E-invoicing"
-msgstr ""
+msgstr "헝가리 - 전자 인보이스"
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_I
@@ -23444,7 +23639,7 @@ msgstr "인도 - 회계"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_in_asset
 msgid "Indian - Accounting Asset"
-msgstr ""
+msgstr "인도 - 회계 자산"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_in_reports
@@ -23464,7 +23659,7 @@ msgstr "Indian - 전자 운송장"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_in_ewaybill_stock
 msgid "Indian - E-waybill Stock"
-msgstr ""
+msgstr "인도 - 전자 운송장 재고"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_in_reports_gstr
@@ -23499,7 +23694,7 @@ msgstr "인도 - 재고 보고서(GST)"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_in_withholding
 msgid "Indian - TDS"
-msgstr ""
+msgstr "인도 - TDS"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_in_hr_payroll
@@ -23742,7 +23937,7 @@ msgstr "POS를 Adyen 결제 단말기와 통합"
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_mercado_pago
 msgid "Integrate your POS with the Mercado Pago Smart Point terminal"
-msgstr ""
+msgstr "POS 시스템을 메르카도 파고 스마트 포인트 단말기와 통합합니다."
 
 #. module: base
 #: model:ir.module.module,summary:base.module_project_mail_plugin
@@ -23833,6 +24028,8 @@ msgid ""
 "Interviewer right will give access to all job position/applications where "
 "the employee is defined. It will allow to refuse, plan meetings."
 msgstr ""
+"면접관 권한은 해당 직원이 등록된 모든 직책과 지원서에 대한 액세스 권한을 부여합니다. 이 액세스 권한을 통해 지원서를 거절하고 미팅을 "
+"예약할 수 있습니다."
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_intrastat
@@ -24286,7 +24483,7 @@ msgstr "이탈리아 - 회계 보고서"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_it_edi_doi
 msgid "Italy - Declaration of Intent"
-msgstr ""
+msgstr "이탈리아 - 선언문"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_it_edi
@@ -24311,7 +24508,7 @@ msgstr "이탈리아 이커머스 전자 청구서"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ci
 msgid "Ivory Coast - Accounting"
-msgstr ""
+msgstr "코트디부아르 - 회계"
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_J
@@ -24447,12 +24644,12 @@ msgstr "케냐 - 회계 및 급여"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ke_edi_oscu_mrp
 msgid "Kenya ETIMS EDI Manufacturing Integration"
-msgstr ""
+msgstr "케냐 ETIMS EDI 생산 통합"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ke_edi_oscu_stock
 msgid "Kenya ETIMS EDI Stock Integration"
-msgstr ""
+msgstr "케냐 ETIMS EDI 재고 통합"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ke_edi_tremol
@@ -24463,7 +24660,7 @@ msgstr "케냐 Tremol 장치의 EDI 통합"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ke_edi_oscu
 msgid "Kenya eTIMS EDI Integration"
-msgstr ""
+msgstr "케냐 eTIMS EDI 통합"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_config_parameter__key
@@ -25008,7 +25205,7 @@ msgstr "링크 추적기"
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_sale_subscription
 msgid "Link between PoS and Sale Subscription."
-msgstr ""
+msgstr "PoS와 판매 구독을 연결합니다."
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_sale_stock_renting
@@ -25480,7 +25677,7 @@ msgstr "말레이시아 - 회계 보고서"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_my_ubl_pint
 msgid "Malaysia - UBL PINT"
-msgstr ""
+msgstr "말레이시아 - UBL PINT"
 
 #. module: base
 #: model:res.country,name:base.mv
@@ -25495,7 +25692,7 @@ msgstr "말리"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ml
 msgid "Mali - Accounting"
-msgstr ""
+msgstr "말리 - 회계"
 
 #. module: base
 #: model:res.country,name:base.mt
@@ -26008,7 +26205,7 @@ msgstr "모리셔스"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_mu_account
 msgid "Mauritius - Accounting"
-msgstr ""
+msgstr "모리셔스 - 회계"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_partner_merge_automatic_wizard__maximum_group
@@ -26155,7 +26352,7 @@ msgstr "멕시코 - 전자 배송 안내서 Comex - 버전 3.0"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_mx_edi_stock_extended_31
 msgid "Mexico - Electronic Delivery Guide Comex - Version 3.1"
-msgstr ""
+msgstr "멕시코 - 전자 배송 가이드 Comex - 버전 3.1"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_mx_reports_closing
@@ -27002,12 +27199,12 @@ msgstr "네덜란드 - SBR ICP"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_nl_reports_sbr_ob_nummer
 msgid "Netherlands - SBR OB Nummer"
-msgstr ""
+msgstr "네덜란드 - SBR OB 번호"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_nl_reports_sbr_status_info
 msgid "Netherlands - SBR Status information service"
-msgstr ""
+msgstr "네덜란드 - SBR 현황 정보 서비스"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_nl_intrastat
@@ -27137,7 +27334,7 @@ msgstr "니제르"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ne
 msgid "Niger - Accounting"
-msgstr ""
+msgstr "니제르 - 회계"
 
 #. module: base
 #: model:res.country,name:base.ng
@@ -27147,12 +27344,12 @@ msgstr "나이지리아"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ng
 msgid "Nigeria - Accounting"
-msgstr ""
+msgstr "나이지리아 - 회계"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ng_reports
 msgid "Nigeria - Accounting Reports"
-msgstr ""
+msgstr "나이지리아 - 회계 보고서"
 
 #. module: base
 #: model:res.country,name:base.nu
@@ -29318,6 +29515,14 @@ msgid "Odoo is unable to merge the generated PDFs."
 msgstr "Odoo는 생성된 PDF를 병합할 수 없습니다."
 
 #. module: base
+#. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid ""
+"Odoo is unable to merge the generated PDFs because of {num_errors} corrupted"
+" file(s)"
+msgstr "{num_errors} 손상된 파일로 인해 생성된 PDF를 병합할 수 없습니다."
+
+#. module: base
 #: model:ir.model.fields,help:base.field_ir_sequence__padding
 msgid ""
 "Odoo will automatically adds some '0' on the left of the 'Next Number' to "
@@ -30204,7 +30409,7 @@ msgstr "POS IoT Six"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_mercado_pago
 msgid "POS Mercado Pago"
-msgstr ""
+msgstr "POS Mercado Pago"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_paytm
@@ -30798,7 +31003,7 @@ msgstr "페루 - Pe Doc을 사용한 POS"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_pe_edi_pos
 msgid "Peruvian Localization for the Point of Sale"
-msgstr ""
+msgstr "POS를 위한 페루 현지화"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_pe_website_sale
@@ -30986,7 +31191,7 @@ msgstr "POS 정산 기한"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_sale_subscription
 msgid "Point of Sale Subscription"
-msgstr ""
+msgstr "POS 구독"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_enterprise
@@ -31666,7 +31871,7 @@ msgstr "잠재 고객"
 #. module: base
 #: model:ir.module.module,summary:base.module_website_sale_shiprocket
 msgid "Provide cash on delivery for website users"
-msgstr ""
+msgstr "웹사이트 사용자를 위한 현금 결제 제공"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_mail_mobile
@@ -32730,12 +32935,12 @@ msgstr "르완다"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_rw
 msgid "Rwanda - Accounting"
-msgstr ""
+msgstr "르완다 - 회계"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_rw_reports
 msgid "Rwanda - Accounting Reports"
-msgstr ""
+msgstr "르완다 - 회계 보고서"
 
 #. module: base
 #: model:res.country,name:base.re
@@ -33079,7 +33284,7 @@ msgstr "소셜 판매 통계"
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_br_sale_subscription
 msgid "Sale subscription modifications for Brazil"
-msgstr ""
+msgstr "브라질의 판매 구독 변경"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_sales
@@ -33099,7 +33304,7 @@ msgstr "판매 및 매입"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_async_emails
 msgid "Sales - Async Emails"
-msgstr ""
+msgstr "영업 - 이메일 비동기화"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_project
@@ -33613,7 +33818,7 @@ msgstr "웹 방문자에게 실시간 알림 보내기"
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_async_emails
 msgid "Send order status emails asynchronously"
-msgstr ""
+msgstr "주문 상태 이메일 비동기적으로 전송"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_event_track_social
@@ -34355,17 +34560,17 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_es_reports_modelo130
 msgid "Spain - Modelo 130"
-msgstr ""
+msgstr "스페인 - Modelo 130"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_es_modelo130
 msgid "Spain - Modelo 130 Tax report"
-msgstr ""
+msgstr "스페인 - Modelo 130 세금 보고서"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_es_pos_tbai
 msgid "Spain - POS + TicketBAI"
-msgstr ""
+msgstr "스페인 - POS + TicketBAI"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_es_pos
@@ -35029,7 +35234,7 @@ msgstr "스웨덴 등록된 현금 등록기"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ch_pos
 msgid "Swiss - Point of Sale"
-msgstr ""
+msgstr "스위스 - POS"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.language_install_view_form_lang_switch
@@ -35122,7 +35327,7 @@ msgstr "상투 메 프린시 페"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_sn
 msgid "Sénégal - Accounting"
-msgstr ""
+msgstr "세네갈 - 회계"
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_T
@@ -35221,12 +35426,12 @@ msgstr "탄자니아"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tz_account
 msgid "Tanzania - Accounting"
-msgstr ""
+msgstr "탄자니아 - 회계"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tz_reports
 msgid "Tanzania - Accounting Reports"
-msgstr ""
+msgstr "탄자니아 - 회계 보고서"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_asset__target
@@ -35276,7 +35481,7 @@ msgstr "TaxCloud를 사용하면 기업에서 비즈니스 세법을 쉽게 준�
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_td
 msgid "Tchad - Accounting"
-msgstr ""
+msgstr "차드 - 회계"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_hidden
@@ -36536,7 +36741,7 @@ msgstr "홍콩의 회계 계정과목표 및 현지화를 관리하는 기본 �
 msgid ""
 "This is the base module to manage chart of accounts and localization for the"
 " Bangladesh "
-msgstr ""
+msgstr "방글라데시 계정과목표 및 현지화를 관리하기 위한 기본 모듈입니다."
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_pk
@@ -37164,7 +37369,7 @@ msgstr "토고"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tg
 msgid "Togo - Accounting"
-msgstr ""
+msgstr "토고 - 회계"
 
 #. module: base
 #: model:res.country,name:base.tk
@@ -37372,18 +37577,18 @@ msgstr "튀니지 - 회계 보고서"
 
 #. module: base
 #: model:res.country,name:base.tr
-msgid "Turkey"
-msgstr "터키"
+msgid "Türkiye"
+msgstr "튀르키예"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr
-msgid "Turkey - Accounting"
-msgstr "터키 - 회계"
+msgid "Türkiye - Accounting"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr_reports
-msgid "Turkey - Accounting Reports"
-msgstr "터키 - 회계 보고서"
+msgid "Türkiye - Accounting Reports"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.tm
@@ -38555,6 +38760,12 @@ msgstr "상속 모드 화면"
 #: model:ir.module.module,summary:base.module_website_crm_livechat
 msgid "View livechat sessions for leads"
 msgstr "영업제안 실시간 채팅 세션 보기"
+
+#. module: base
+#. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid "View Problematic Record(s)"
+msgstr "문제가 있는 기록 보기"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_ui_view

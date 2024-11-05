@@ -2273,3 +2273,94 @@ class TestBoM(TestMrpCommon):
         notification = bom.action_compute_bom_days()
         self.assertEqual(bom.days_to_prepare_mo, 0.0)
         self.assertEqual((notification['type'], notification['tag']), ('ir.actions.client', 'display_notification'))
+
+    def test_workorders_on_bom_changes(self):
+        """
+        Check that the workorders of the MO are changed according to the bom
+        and that bom free workorders are not reset on bom changes.
+        """
+        product = self.product_4
+        bom_1, bom_2, bom_3 = self.env['mrp.bom'].create([
+            {
+                'product_tmpl_id': product.product_tmpl_id.id,
+                'product_qty': 1.0,
+                'operation_ids': [
+                    Command.create({'name': 'op1', 'workcenter_id': self.workcenter_1.id, 'time_cycle': 1.0}),
+                    Command.create({'name': 'op2', 'workcenter_id': self.workcenter_1.id, 'time_cycle': 1.0}),
+                ],
+            },
+            {
+                'product_tmpl_id': product.product_tmpl_id.id,
+                'product_qty': 1.0,
+                'operation_ids': [
+                    Command.create({'name': 'op3', 'workcenter_id': self.workcenter_1.id, 'time_cycle': 1.0}),
+                    Command.create({'name': 'op4', 'workcenter_id': self.workcenter_1.id, 'time_cycle': 1.0}),
+                ],
+            },
+            {
+                'product_tmpl_id': product.product_tmpl_id.id,
+                'product_qty': 1.0,
+                'operation_ids': [
+                    Command.create({'name': 'op5', 'workcenter_id': self.workcenter_1.id, 'time_cycle': 1.0}),
+                    Command.create({'name': 'op6', 'workcenter_id': self.workcenter_1.id, 'time_cycle': 1.0}),
+                ],
+            },
+        ])
+        mo_form = Form(self.env['mrp.production'])
+        mo_form.product_id = product
+        mo_form.product_qty = 1.0
+        mo_form.bom_id = bom_1
+        mo = mo_form.save()
+        self.assertEqual(mo.workorder_ids.mapped('name'), ['op1', 'op2'])
+        # test simple on change
+        with Form(mo) as mo_form:
+            mo_form.bom_id = bom_2
+        self.assertEqual(mo.workorder_ids.mapped('name'), ['op3', 'op4'])
+        # test double onchange
+        with Form(mo) as mo_form:
+            mo_form.bom_id = bom_1
+            mo_form.bom_id = bom_3
+        self.assertEqual(mo.workorder_ids.mapped('name'), ['op5', 'op6'])
+        # add a new operation and check that it is not removed on bom change
+        with Form(mo) as mo_form:
+            with mo_form.workorder_ids.new() as wo_form:
+                wo_form.name = 'new op'
+                wo_form.workcenter_id = self.workcenter_2
+        self.assertEqual(mo.workorder_ids.mapped('name'), ['op5', 'op6', 'new op'])
+        with Form(mo) as mo_form:
+            mo_form.bom_id = bom_2
+        self.assertEqual(set(mo.workorder_ids.mapped('name')), {'op3', 'op4', 'new op'})
+
+    def test_archive_operation(self):
+        """ Checks that archiving an operation having both a bom line and a byproduct line linked to it properly unlinks them.
+        """
+        final, comp1, comp2, bp1, bp2 = self.make_prods(5)
+        bom = self.env['mrp.bom'].create({
+            'product_tmpl_id': final.product_tmpl_id.id,
+            'product_qty': 1.0,
+            'bom_line_ids': [
+                Command.create({'product_id': comp1.id, 'product_qty': 1.0}),
+                Command.create({'product_id': comp2.id, 'product_qty': 1.0}),
+            ],
+            'byproduct_ids': [
+                Command.create({'product_id': bp1.id, 'product_qty': 1.0}),
+                Command.create({'product_id': bp2.id, 'product_qty': 1.0}),
+            ],
+            'operation_ids': [
+                Command.create({'name': 'OPE_1', 'workcenter_id': self.workcenter_1.id}),
+                Command.create({'name': 'OPE_2', 'workcenter_id': self.workcenter_1.id}),
+            ],
+        })
+        # Assign operation to each bom/byproduct line
+        ope_1, ope_2 = bom.operation_ids
+        bom.bom_line_ids[0].operation_id = ope_1
+        bom.byproduct_ids[0].operation_id = ope_1
+        bom.bom_line_ids[1].operation_id = ope_2
+        bom.byproduct_ids[1].operation_id = ope_2
+
+        # Archive first operation
+        ope_1.action_archive()
+        self.assertFalse(bom.bom_line_ids[0].operation_id)
+        self.assertFalse(bom.byproduct_ids[0].operation_id)
+        self.assertEqual(bom.bom_line_ids[1].operation_id, ope_2)
+        self.assertEqual(bom.byproduct_ids[1].operation_id, ope_2)

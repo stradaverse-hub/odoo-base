@@ -17,17 +17,17 @@
 # שהאב חוסיין <shhab89@gmail.com>, 2023
 # ExcaliberX <excaliberx@gmail.com>, 2023
 # Roy Sayag, 2024
-# MichaelHadar, 2024
-# hed shefer <hed@laylinetech.com>, 2024
-# yael terner, 2024
 # Martin Trigaux, 2024
 # ZVI BLONDER <ZVIBLONDER@gmail.com>, 2024
 # Moshe Flam <pashute@gmail.com>, 2024
 # Lilach Gilliam <lilach.gilliam@gmail.com>, 2024
 # Yihya Hugirat <hugirat@gmail.com>, 2024
-# Ha Ketem <haketem@gmail.com>, 2024
 # Netta Waizer, 2024
 # דודי מלכה <Dudimalka6@gmail.com>, 2024
+# Ha Ketem <haketem@gmail.com>, 2024
+# yael terner, 2024
+# MichaelHadar, 2024
+# hed shefer <hed@laylinetech.com>, 2024
 # 
 msgid ""
 msgstr ""
@@ -35,7 +35,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-26 12:42+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: דודי מלכה <Dudimalka6@gmail.com>, 2024\n"
+"Last-Translator: hed shefer <hed@laylinetech.com>, 2024\n"
 "Language-Team: Hebrew (https://app.transifex.com/odoo/teams/41243/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1226,7 +1226,7 @@ msgstr ""
 #: model:ir.module.module,description:base.module_l10n_tr_reports
 msgid ""
 "\n"
-"Accounting reports for Turkey\n"
+"Accounting reports for Türkiye\n"
 msgstr ""
 
 #. module: base
@@ -1422,7 +1422,7 @@ msgstr ""
 #: model:ir.module.module,description:base.module_l10n_fr_facturx_chorus_pro
 msgid ""
 "\n"
-"Add supports to fill three optional fields used when using Chorus Pro, especially when invoicing public services.\n"
+"Add support to fill three optional fields used when using Chorus Pro, especially when invoicing public services.\n"
 msgstr ""
 
 #. module: base
@@ -2927,6 +2927,7 @@ msgid ""
 "=========================================================================================\n"
 "\n"
 "German accounting chart and localization.\n"
+"By default, the audit trail is enabled for GoBD compliance.\n"
 msgstr ""
 
 #. module: base
@@ -7707,7 +7708,7 @@ msgid ""
 "    * Defines the default taxes\n"
 "    * Defines default tax report\n"
 "\n"
-"This was done in collaboration with Broadmax Partner in Turkey.\n"
+"This was done in collaboration with Broadmax Partner in Türkiye.\n"
 msgstr ""
 
 #. module: base
@@ -8760,7 +8761,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_partner_kanban_view
 msgid "<span class=\"text-bg-danger\">Archived</span>"
-msgstr ""
+msgstr "<span class=\"text-bg-danger\">בארכיון</span>"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.demo_force_install_form
@@ -9562,7 +9563,7 @@ msgstr "בקרת גישה"
 #. module: base
 #: model:ir.model,name:base.model_res_groups
 msgid "Access Groups"
-msgstr "קבוצות גישה"
+msgstr "קבוצות הרשאה"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_groups__menu_access
@@ -13230,7 +13231,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_groups__comment
 msgid "Comment"
-msgstr "הערה"
+msgstr "תגובה"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__commercial_partner_id
@@ -13947,7 +13948,7 @@ msgstr "אשף יצירת תפריט"
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_actions_server__state__object_create
 msgid "Create Record"
-msgstr ""
+msgstr "צור רשומה"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_industry_fsm_report
@@ -16088,7 +16089,7 @@ msgid ""
 "Enter Python code here. Help about Python expression is available in the "
 "help tab of this document."
 msgstr ""
-"הזן קוד פייתון כאן. עזרה לגבי ביטוי פייתון זמינה בלשונית העזרה של מסמך זה."
+"כתוב כאן קוד פייתון. בלשונית העזרה תוכל למצוא עזרה לגבי כתיבת ביטוי פייתון."
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.form_res_users_key_description
@@ -16288,7 +16289,7 @@ msgstr ""
 #: model:ir.module.module,shortdesc:base.module_website_event_jitsi
 #: model:ir.module.module,summary:base.module_website_event_jitsi
 msgid "Event / Jitsi"
-msgstr ""
+msgstr "אירוע / ג'יטסי"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mass_mailing_event_sms
@@ -16435,7 +16436,7 @@ msgstr "בלעדי"
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_actions_server__state__code
 msgid "Execute Code"
-msgstr ""
+msgstr "בצע קוד"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_cron_view_form
@@ -16445,7 +16446,7 @@ msgstr "בצע כל"
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_actions_server__state__multi
 msgid "Execute Existing Actions"
-msgstr ""
+msgstr "בצע פעולות קיימות"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_cron_view_search
@@ -16576,7 +16577,7 @@ msgstr "שורת ייצוא"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
 msgid "Expression"
-msgstr ""
+msgstr "ביטוי"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_base_address_extended
@@ -17327,7 +17328,7 @@ msgstr "גופן"
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_I
 msgid "Food/Hospitality"
-msgstr ""
+msgstr "מזון / אירוח"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_company__report_footer
@@ -17955,7 +17956,7 @@ msgstr "לוח שנה של גוגל"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_google_gmail
 msgid "Google Gmail"
-msgstr ""
+msgstr "ג'ימייל של גוגל"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_google_map
@@ -20420,7 +20421,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_productivity_knowledge
 #: model:ir.module.module,shortdesc:base.module_knowledge
 msgid "Knowledge"
-msgstr "ידע"
+msgstr "ניהול ידע"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_knowledge
@@ -24065,7 +24066,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_whatsapp
 msgid "Odoo WhatsApp Integration"
-msgstr ""
+msgstr "וואטסאפ"
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_sale
@@ -24255,6 +24256,14 @@ msgstr ""
 #: code:addons/base/models/ir_actions_report.py:0
 #, python-format
 msgid "Odoo is unable to merge the generated PDFs."
+msgstr ""
+
+#. module: base
+#. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid ""
+"Odoo is unable to merge the generated PDFs because of {num_errors} corrupted"
+" file(s)"
 msgstr ""
 
 #. module: base
@@ -26962,7 +26971,7 @@ msgstr "תאריך הפניה"
 #. module: base
 #: model:ir.module.category,name:base.module_category_human_resources_referrals
 msgid "Referrals"
-msgstr "הפניות"
+msgstr "חבר מביא חבר"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__parent_id
@@ -28306,7 +28315,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_actions_server__state__webhook
 msgid "Send Webhook Notification"
-msgstr ""
+msgstr "בצע פניית Webhook"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sign
@@ -32001,17 +32010,17 @@ msgstr ""
 
 #. module: base
 #: model:res.country,name:base.tr
-msgid "Turkey"
-msgstr "טורקיה "
+msgid "Türkiye"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr
-msgid "Turkey - Accounting"
-msgstr "טורקיה - הנהלת חשבונות"
+msgid "Türkiye - Accounting"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr_reports
-msgid "Turkey - Accounting Reports"
+msgid "Türkiye - Accounting Reports"
 msgstr ""
 
 #. module: base
@@ -32367,7 +32376,7 @@ msgstr ""
 #: code:addons/base/models/res_currency.py:0
 #, python-format
 msgid "Unit per %s"
-msgstr "יחידה לכל%s"
+msgstr "יחידה ל%s"
 
 #. module: base
 #: model:res.country,name:base.ae
@@ -32571,7 +32580,7 @@ msgstr "עדכון רשימת מודולים"
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_actions_server__state__object_write
 msgid "Update Record"
-msgstr ""
+msgstr "עדכן רשומה"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_server__update_related_model_id
@@ -33188,6 +33197,12 @@ msgstr "הצג מצב ירושה"
 #: model:ir.module.module,summary:base.module_website_crm_livechat
 msgid "View livechat sessions for leads"
 msgstr "צפה בהפעלות צ'אט חי (לייב צ'אט)  עבור לידים"
+
+#. module: base
+#. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid "View Problematic Record(s)"
+msgstr ""
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_ui_view

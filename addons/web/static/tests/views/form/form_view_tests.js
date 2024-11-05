@@ -4046,6 +4046,67 @@ QUnit.module("Views", (hooks) => {
         await editInput(target, ".o_field_widget[name=foo] input", "tralala");
     });
 
+    QUnit.test(
+        "onchange send relation parent field values (including readonly)",
+        async function (assert) {
+            assert.expect(1);
+
+            serverData.models.user.fields.login = { string: "Login", type: "char" };
+            serverData.models.user.onchanges = {};
+            serverData.models.user.onchanges.name = (obj) => {
+                // like computed field that depends on "name" field
+                obj.login = obj.name.toLowerCase() + "@example.org";
+            };
+            serverData.models.partner.onchanges.qux = () => {};
+
+            let checkOnchange = false;
+            await makeView({
+                type: "form",
+                resModel: "user",
+                serverData,
+                arch: `
+                <form>
+                    <field name="name"/>
+                    <field name="login" readonly="True"/>
+                    <field name="partner_ids">
+                        <tree editable="top">
+                            <field name="qux"/>
+                        </tree>
+                    </field>
+                </form>`,
+                resId: 17,
+                mockRPC(route, args) {
+                    if (args.method === "onchange" && checkOnchange) {
+                        assert.deepEqual(
+                            args.args[1],
+                            {
+                                qux: 12.4,
+                                user_id: {
+                                    id: 17,
+                                    name: "Test",
+                                    login: "test@example.org",
+                                    partner_ids: [
+                                        [0, args.args[1].user_id.partner_ids[0][1], { qux: 0 }],
+                                    ],
+                                },
+                            },
+                            "should send the values (including readonly) for the relational parent field"
+                        );
+                    }
+                },
+            });
+            // trigger an onchange that update a readonly field by modifying user name
+            await editInput(target, ".o_field_widget[name=name] input", "Test");
+
+            // add a o2m row
+            await click(target.querySelector(".o_field_x2many_list_row_add a"));
+
+            // trigger an onchange by modifying foo
+            checkOnchange = true;
+            await editInput(target, ".o_field_one2many .o_field_widget[name=qux] input", "12.4");
+        }
+    );
+
     QUnit.test("evaluate in python field options", async function (assert) {
         assert.expect(3);
 
@@ -5374,6 +5435,135 @@ QUnit.module("Views", (hooks) => {
         await clickDiscard(target);
         assert.containsNone(target, ".modal", "modal should not be displayed");
         assert.containsNone(target, ".o_data_row");
+    });
+
+    QUnit.test("discard changes on relational data on existing record", async function (assert) {
+        serverData.models.partner.records[0].product_ids = [37];
+        serverData.models.partner.records[0].bar = false;
+        serverData.models.partner.onchanges = {
+            bar(record) {
+                // when bar changes, push another record in product_ids.
+                record.product_ids = [[4, 41]];
+            },
+        };
+        await makeView({
+            type: "form",
+            resModel: "partner",
+            serverData,
+            resId: 1,
+            arch: `
+                <form>
+                    <field name="bar"/>
+                    <field name="product_ids" widget="one2many">
+                        <tree>
+                            <field name="display_name"/>
+                        </tree>
+                    </field>
+                </form>`,
+        });
+
+        assert.deepEqual(getNodesTextContent(target.querySelectorAll(".o_data_cell")), ["xphone"]);
+        assert.containsNone(target, ".o_field_widget[name=bar] input:checked");
+
+        // Click on bar
+        await click(target.querySelector(".o_field_widget[name=bar] input"));
+        assert.containsOnce(target, ".o_field_widget[name=bar] input:checked");
+        assert.deepEqual(getNodesTextContent(target.querySelectorAll(".o_data_cell")), [
+            "xphone",
+            "xpad",
+        ]);
+
+        // click on discard
+        await clickDiscard(target);
+        assert.deepEqual(getNodesTextContent(target.querySelectorAll(".o_data_cell")), ["xphone"]);
+        assert.containsNone(target, ".o_field_widget[name=bar] input:checked");
+    });
+
+    QUnit.test("discard changes on relational data on new record (1)", async function (assert) {
+        // When bar is changed, it pushes a record in product_ids
+        // After discarding, product_ids should be empty
+        serverData.models.partner.onchanges = {
+            bar(record) {
+                if (record.bar) {
+                    // when bar changes, push another record in product_ids.
+                    record.product_ids = [[4, 41]];
+                }
+            },
+        };
+        await makeView({
+            type: "form",
+            resModel: "partner",
+            serverData,
+            arch: `
+                <form>
+                    <field name="bar"/>
+                    <field name="product_ids" widget="one2many">
+                        <tree>
+                            <field name="display_name"/>
+                        </tree>
+                    </field>
+                </form>`,
+        });
+
+        assert.deepEqual(getNodesTextContent(target.querySelectorAll(".o_data_cell")), []);
+        assert.containsNone(target, ".o_field_widget[name=bar] input:checked");
+
+        // Click on bar
+        await click(target.querySelector(".o_field_widget[name=bar] input"));
+        assert.containsOnce(target, ".o_field_widget[name=bar] input:checked");
+        assert.deepEqual(getNodesTextContent(target.querySelectorAll(".o_data_cell")), ["xpad"]);
+
+        // click on discard
+        await clickDiscard(target);
+        assert.deepEqual(getNodesTextContent(target.querySelectorAll(".o_data_cell")), []);
+        assert.containsNone(target, ".o_field_widget[name=bar] input:checked");
+    });
+
+    QUnit.test("discard changes on relational data on new record (2)", async function (assert) {
+        // An initial onChange push a record in product_ids
+        // When bar is changed, it pushes a second record in product_ids
+        // After discarding, product_ids should contain the inital record pushed by the inital onChange
+        serverData.models.partner.onchanges = {
+            product_ids(record) {
+                record.product_ids = [[4, 41]];
+            },
+            bar(record) {
+                // when bar changes, push another record in product_ids.
+                if (record.bar) {
+                    record.product_ids = [[4, 37]];
+                }
+            },
+        };
+        await makeView({
+            type: "form",
+            resModel: "partner",
+            serverData,
+            arch: `
+                <form>
+                    <field name="bar"/>
+                    <field name="product_ids" widget="one2many">
+                        <tree>
+                            <field name="display_name"/>
+                        </tree>
+                    </field>
+                </form>`,
+        });
+
+        assert.deepEqual(getNodesTextContent(target.querySelectorAll(".o_data_cell")), ["xpad"]);
+        assert.containsNone(target, ".o_field_widget[name=bar] input:checked");
+
+        // Click on bar
+        await click(target.querySelector(".o_field_widget[name=bar] input"));
+        assert.containsOnce(target, ".o_field_widget[name=bar] input:checked");
+        assert.deepEqual(getNodesTextContent(target.querySelectorAll(".o_data_cell")), [
+            "xpad",
+            "xphone",
+        ]);
+
+        // click on discard
+        await clickDiscard(target);
+        assert.deepEqual(getNodesTextContent(target.querySelectorAll(".o_data_cell")), ["xpad"]);
+        assert.containsNone(target, ".o_field_widget[name=bar] input:checked");
     });
 
     QUnit.test(
@@ -14869,6 +15059,73 @@ QUnit.module("Views", (hooks) => {
             );
             await clickSave(target);
             assert.verifySteps(["web_save"]);
+        }
+    );
+
+    QUnit.test(
+        "do not perform button action for records with invalid datas",
+        async function (assert) {
+            const formView = registry.category("views").get("form");
+            const fakeActionService = {
+                start() {
+                    return {
+                        doActionButton(params) {
+                            assert.step("Perform Action");
+                            assert.strictEqual(params.name, "lovely action");
+                            assert.strictEqual(params.type, "action");
+                        },
+                    };
+                },
+            };
+            serviceRegistry.add("action", fakeActionService, { force: true });
+            class CustomFormController extends formView.Controller {
+                beforeExecuteActionButton(clickParams) {
+                    assert.step("Check/prepare record datas");
+                    return super.beforeExecuteActionButton(clickParams);
+                }
+            }
+            registry.category("views").add("custom_form", {
+                ...formView,
+                Controller: CustomFormController,
+            });
+            // The records data are invalid since foo is required
+            serverData.models.partner.records = [{ id: 6, display_name: "Bob", foo: "" }];
+            const form = await makeView({
+                type: "form",
+                resModel: "partner",
+                resId: 6,
+                serverData,
+                arch: `
+                    <form js_class="custom_form">
+                        <field name="foo" required="1"></field>
+                        <button type="action" name="lovely action" string="Use Foo"/>
+                    </form>`,
+                mockRPC(route, args) {
+                    if (args.method === "web_save") {
+                        assert.step("web_save");
+                    }
+                },
+            });
+            patchWithCleanup(form.env.services.notification, {
+                add: (message) => {
+                    assert.step(`Pop Up: Invalid Field: ${message}`);
+                },
+            });
+
+            assert.verifySteps([]);
+            // Try to perform the action with invalid datas
+            await click(target.querySelector(".btn[name='lovely action']"));
+            // the action should not be called thanks to the `_checkValidity`
+            assert.verifySteps([
+                "Check/prepare record datas",
+                "Pop Up: Invalid Field: <ul><li>Foo</li></ul>",
+            ]);
+            // Edit the required field
+            await editInput(target, ".o_input", "Foo Value");
+            // Try to perform the action once more
+            await click(target.querySelector(".btn[name='lovely action']"));
+            // the record should have been saved and the action performed.
+            assert.verifySteps(["Check/prepare record datas", "web_save", "Perform Action"]);
         }
     );
 });

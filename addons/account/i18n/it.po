@@ -5,16 +5,17 @@
 # Translators:
 # Martin Trigaux, 2023
 # Sergio Zanchetta <primes2h@gmail.com>, 2024
-# Marianna Ciofani, 2024
 # Wil Odoo, 2024
+# Lorenzo Battistini <lb@takobi.online>, 2024
+# Marianna Ciofani, 2024
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0\n"
+"Project-Id-Version: Odoo Server 17.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 10:26+0000\n"
+"POT-Creation-Date: 2024-09-06 12:08+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Marianna Ciofani, 2024\n"
 "Language-Team: Italian (https://app.transifex.com/odoo/teams/41243/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1613,6 +1614,22 @@ msgstr ""
 "configurazione del conto."
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of payable type, but is used in a sale operation."
+msgstr ""
+"Il conto %s è di debito ma viene utilizzato in un'operazione di vendita."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of receivable type, but is used in a purchase operation."
+msgstr ""
+"Il conto %s è di credito ma viene utilizzato in un'operazione d'acquisto."
+
+#. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings__module_account_avatax
 msgid "Account Avatax"
 msgstr "Conto Avatax"
@@ -1959,6 +1976,11 @@ msgid ""
 msgstr ""
 "Conto: pubblica registrazioni in bozza con auto_post attivato e date "
 "contabili fino a oggi"
+
+#. module: account
+#: model:res.groups,name:account.group_account_manager
+msgid "Accountant"
+msgstr "Contabile"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings__module_account_accountant
@@ -3449,7 +3471,6 @@ msgid "Billing"
 msgstr "Fatturazione"
 
 #. module: account
-#: model:res.groups,name:account.group_account_manager
 msgid "Billing Administrator"
 msgstr "Responsabile fatturazione"
 
@@ -3500,6 +3521,11 @@ msgstr "Vuoto se zero"
 #: model:ir.model.fields.selection,name:account.selection__res_partner__invoice_warn__block
 msgid "Blocking Message"
 msgstr "Messaggio di blocco"
+
+#. module: account
+#: model:res.groups,name:account.group_account_user
+msgid "Bookkeeper"
+msgstr "Contabile"
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_report_column__figure_type__boolean
@@ -5447,7 +5473,7 @@ msgstr "Limite del credito predefinito"
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_journal_form
 msgid "Default Expense Account"
-msgstr "Conto di ammortamento predefinito"
+msgstr "Conto di costo predefinito"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_journal_form
@@ -6530,7 +6556,7 @@ msgstr "Costi"
 #: model:ir.model.fields,field_description:account.field_product_product__property_account_expense_id
 #: model:ir.model.fields,field_description:account.field_product_template__property_account_expense_id
 msgid "Expense Account"
-msgstr "Conto di ammortamento"
+msgstr "Conto di costo"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_automatic_entry_wizard__expense_accrual_account
@@ -7033,6 +7059,16 @@ msgstr "Formula"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_report_expression__carryover_target
+msgid ""
+"Formula in the form line_code.expression_label. This allows setting the "
+"target of the carryover for this expression (on a _carryover_*-labeled "
+"expression), in case it is different from the parent line."
+msgstr ""
+"La formula nel modulo  line_code.expression_label. Questo permette di "
+"configurare l'etichetta del riporto per quest'espressione (su un'espressione"
+" etichettata come _carryover_*), in caso differisca dalla riga principale."
+
+#. module: account
 msgid ""
 "Formula in the form line_code.expression_label. This allows setting the "
 "target of the carryover for this expression (on a _carryover_*-labeled "
@@ -8961,7 +8997,7 @@ msgid ""
 msgstr ""
 "Lasciare il campo vuoto per usare il valore predefinito della categoria del "
 "prodotto. Se è stata configurata la contabilità anglosassone con metodo di "
-"valutazione automatico, viene utilizzato il conto di ammortamento."
+"valutazione automatico, viene utilizzato il conto di costo."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_digest_digest__kpi_account_total_revenue_value
@@ -11835,6 +11871,11 @@ msgid "Re-Sequence"
 msgstr "Riordina sequenza"
 
 #. module: account
+#: model:res.groups,name:account.group_account_readonly
+msgid "Read-only"
+msgstr "Sola lettura"
+
+#. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_reversal__reason
 msgid "Reason displayed on Credit Note"
 msgstr "Ragione visualizzata nella nota di credito"
@@ -13153,7 +13194,6 @@ msgstr ""
 "saranno anche nominate usando questo prefisso per impostazione predefinita."
 
 #. module: account
-#: model:res.groups,name:account.group_account_readonly
 msgid "Show Accounting Features - Readonly"
 msgstr "Mostrare funzionalità contabili - Sola lettura"
 
@@ -13188,7 +13228,6 @@ msgid "Show Force Tax Included"
 msgstr "Mostra forza imposta inclusa"
 
 #. module: account
-#: model:res.groups,name:account.group_account_user
 msgid "Show Full Accounting Features"
 msgstr "Mostrare funzionalità contabili complete"
 
@@ -14084,6 +14123,17 @@ msgstr ""
 "Il %(date_field)s (%(date)s) non combacia con il numero di sequenza del %(model)s relativo (%(sequence)s)\n"
 "Dovrai pulire il %(sequence_field)s del %(model)s per procedere.\n"
 "In questo modo, si potrebbe voler riordinare le voci per mantenere una sequenza continua basata sulla data."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"The Availability is set to 'Country Matches' but the field Country is not "
+"set."
+msgstr ""
+"La disponibilità è impostata su \"Il Paese corrisponde a\" ma il campo Paese"
+" non è configurato."
 
 #. module: account
 #. odoo-python
@@ -15454,6 +15504,16 @@ msgstr ""
 
 #. module: account
 #. odoo-python
+#: code:addons/account/models/account_journal.py:0
+#, python-format
+msgid ""
+"This journal is associated with a payment method. You cannot archive it"
+msgstr ""
+"Questo registro è associato a un metodo di pagamento. Non è possibile "
+"archiviarlo"
+
+#. module: account
+#. odoo-python
 #: code:addons/account/models/company.py:0
 #, python-format
 msgid "This journal is not in strict mode."
@@ -16021,6 +16081,13 @@ msgstr "Prezzo unitario:"
 #: model:ir.model.fields,field_description:account.field_account_move_line__product_uom_id
 msgid "Unit of Measure"
 msgstr "Unità di misura"
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/template_generic_coa.py:0
+#, python-format
+msgid "United States of America (Generic)"
+msgstr "Stati Uniti d'America (Generico)"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_form
@@ -16657,6 +16724,17 @@ msgid ""
 msgstr ""
 "Se selezionato, i valori pari a 0 non verranno mostrati quando viene "
 "visualizzato il valore di questa espressione."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"When targeting an expression for carryover, the label of that expression "
+"must start with _applied_carryover_"
+msgstr ""
+"Quando si indica un'espressione per il riporto, l'etichetta dell'espressione"
+" deve iniziare con _applied_carryover_"
 
 #. module: account
 #: model_terms:ir.actions.act_window,help:account.action_move_in_receipt_type
@@ -17501,6 +17579,17 @@ msgstr "Impossibile usare un conto non attivo."
 #, python-format
 msgid "You cannot use taxes on lines with an Off-Balance account"
 msgstr "Impossibile usare imposte su righe relative a un conto sbilanciato"
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"You cannot use the field carryover_target in an expression that does not "
+"have the label starting with _carryover_"
+msgstr ""
+"Non è possibile utilizzare il campo carryover_target in un'espressione che "
+"non ha l'etichetta che inizia con _carryover_"
 
 #. module: account
 #. odoo-python

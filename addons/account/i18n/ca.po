@@ -11,14 +11,13 @@
 # M Palau <mpalau@tda.ad>, 2023
 # Xavi Ivars <xavi.ivars@gmail.com>, 2023
 # oscaryuu, 2023
-# xean, 2023
 # martioodo hola, 2023
 # Josep Sànchez <papapep@gmx.com>, 2023
 # Sandra Franch <sandra.franch@upc.edu>, 2023
 # jabiri7, 2023
 # Eugeni Chafer <eugeni@chafer.cat>, 2023
 # Marc Tormo i Bochaca <mtbochaca@gmail.com>, 2023
-# AncesLatino2004, 2023
+# 7b9408628f00af852f513eb4f12c005b_f9c6891, 2023
 # eriiikgt, 2023
 # ericrolo, 2023
 # Jonatan Gk, 2024
@@ -34,19 +33,20 @@
 # Jonathan Pasquier <jpasquier@fundesplai.org>, 2024
 # Óscar Fonseca <tecnico@pyming.com>, 2024
 # Santiago Payà <santiagopim@gmail.com>, 2024
-# Estudi TIC, 2024
+# EstudiTIC, 2024
 # Ivan Espinola, 2024
 # Arnau Ros, 2024
 # Quim - eccit <quim@eccit.com>, 2024
 # Harcogourmet, 2024
+# xean, 2024
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0\n"
+"Project-Id-Version: Odoo Server 17.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 10:26+0000\n"
+"POT-Creation-Date: 2024-09-06 12:08+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Harcogourmet, 2024\n"
+"Last-Translator: xean, 2024\n"
 "Language-Team: Catalan (https://app.transifex.com/odoo/teams/41243/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1592,6 +1592,20 @@ msgstr ""
 "d'aquest compte per a permetre-ho.."
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of payable type, but is used in a sale operation."
+msgstr ""
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of receivable type, but is used in a purchase operation."
+msgstr ""
+
+#. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings__module_account_avatax
 msgid "Account Avatax"
 msgstr "Compte de *Avatax"
@@ -1938,6 +1952,11 @@ msgid ""
 msgstr ""
 "Compte: Publica les entrades en esborrany amb l'auto_post activat i data "
 "comptable fins el dia d'avui"
+
+#. module: account
+#: model:res.groups,name:account.group_account_manager
+msgid "Accountant"
+msgstr ""
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings__module_account_accountant
@@ -3424,7 +3443,6 @@ msgid "Billing"
 msgstr "Facturació"
 
 #. module: account
-#: model:res.groups,name:account.group_account_manager
 msgid "Billing Administrator"
 msgstr "Administrador de facturació"
 
@@ -3475,6 +3493,11 @@ msgstr "En blanc si és zero"
 #: model:ir.model.fields.selection,name:account.selection__res_partner__invoice_warn__block
 msgid "Blocking Message"
 msgstr "Missatge de bloqueig"
+
+#. module: account
+#: model:res.groups,name:account.group_account_user
+msgid "Bookkeeper"
+msgstr ""
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_report_column__figure_type__boolean
@@ -7002,6 +7025,13 @@ msgstr "Fórmula"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_report_expression__carryover_target
+msgid ""
+"Formula in the form line_code.expression_label. This allows setting the "
+"target of the carryover for this expression (on a _carryover_*-labeled "
+"expression), in case it is different from the parent line."
+msgstr ""
+
+#. module: account
 msgid ""
 "Formula in the form line_code.expression_label. This allows setting the "
 "target of the carryover for this expression (on a _carryover_*-labeled "
@@ -11795,6 +11825,11 @@ msgid "Re-Sequence"
 msgstr "Re-seqüència"
 
 #. module: account
+#: model:res.groups,name:account.group_account_readonly
+msgid "Read-only"
+msgstr "Només lectura"
+
+#. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_reversal__reason
 msgid "Reason displayed on Credit Note"
 msgstr "Motiu que es mostra a la factura rectificativa"
@@ -13113,7 +13148,6 @@ msgstr ""
 "anomenades usant aquest prefix per omissió."
 
 #. module: account
-#: model:res.groups,name:account.group_account_readonly
 msgid "Show Accounting Features - Readonly"
 msgstr "Mostrar funcions de comptabilitat: només lectura"
 
@@ -13148,7 +13182,6 @@ msgid "Show Force Tax Included"
 msgstr "Mostra els impostos inclosos"
 
 #. module: account
-#: model:res.groups,name:account.group_account_user
 msgid "Show Full Accounting Features"
 msgstr "Mostra les funcions comptables completes"
 
@@ -14045,6 +14078,15 @@ msgstr ""
 "La %(date_field)s (%(date)s) no coincideix amb el número de seqüència de %(model)s (%(sequence)s)\n"
 "Haureu d'esborrar el %(sequence_field)s de %(model)s per a procedir.\n"
 "En fer-ho, és possible que vulgueu tornar a ordenar les vostres entrades per mantenir una seqüència contínua basada en dates."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"The Availability is set to 'Country Matches' but the field Country is not "
+"set."
+msgstr ""
 
 #. module: account
 #. odoo-python
@@ -15399,6 +15441,14 @@ msgstr ""
 
 #. module: account
 #. odoo-python
+#: code:addons/account/models/account_journal.py:0
+#, python-format
+msgid ""
+"This journal is associated with a payment method. You cannot archive it"
+msgstr ""
+
+#. module: account
+#. odoo-python
 #: code:addons/account/models/company.py:0
 #, python-format
 msgid "This journal is not in strict mode."
@@ -15970,6 +16020,13 @@ msgstr "Preu unitari:"
 #: model:ir.model.fields,field_description:account.field_account_move_line__product_uom_id
 msgid "Unit of Measure"
 msgstr "Unitat de mesura"
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/template_generic_coa.py:0
+#, python-format
+msgid "United States of America (Generic)"
+msgstr ""
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_form
@@ -16605,6 +16662,15 @@ msgid ""
 msgstr ""
 "Quan està marcada, 0 valors no es mostraran quan es mostri el valor "
 "d'aquesta expressió."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"When targeting an expression for carryover, the label of that expression "
+"must start with _applied_carryover_"
+msgstr ""
 
 #. module: account
 #: model_terms:ir.actions.act_window,help:account.action_move_in_receipt_type
@@ -17437,6 +17503,15 @@ msgstr "No podeu usar un compte obsolet."
 #, python-format
 msgid "You cannot use taxes on lines with an Off-Balance account"
 msgstr "No podeu usar impostos en línies amb un compte d' fora de línia"
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"You cannot use the field carryover_target in an expression that does not "
+"have the label starting with _carryover_"
+msgstr ""
 
 #. module: account
 #. odoo-python

@@ -1172,7 +1172,7 @@ msgstr "eウォレットを生成"
 #: code:addons/loyalty/static/src/xml/loyalty_templates.xml:0
 #, python-format
 msgid "Generate {{props.context.program_item_name}}"
-msgstr ""
+msgstr "生成 {{props.context.program_item_name}}"
 
 #. module: loyalty
 #. odoo-python
@@ -1759,7 +1759,7 @@ msgstr "規則ポイントリワードは必ず正の値にして下さい。"
 #. module: loyalty
 #: model_terms:ir.ui.view,arch_db:loyalty.loyalty_program_view_form
 msgid "Rules & Rewards"
-msgstr "ルール & リワード"
+msgstr "規則 & リワード"
 
 #. module: loyalty
 #: model:ir.model.fields.selection,name:loyalty.selection__loyalty_generate_wizard__mode__selected
@@ -2194,4 +2194,4 @@ msgstr "自分のオーダ"
 #: code:addons/loyalty/static/src/xml/loyalty_templates.xml:0
 #, python-format
 msgid "{{loyalty_el_title}}"
-msgstr ""
+msgstr "{{loyalty_el_title}}"

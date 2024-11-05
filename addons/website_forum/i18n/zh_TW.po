@@ -1008,7 +1008,7 @@ msgstr "附件"
 #: model:ir.model.fields,field_description:website_forum.field_forum_post__message_attachment_count
 #: model:ir.model.fields,field_description:website_forum.field_forum_tag__message_attachment_count
 msgid "Attachment Count"
-msgstr "附件數"
+msgstr "附件數目"
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_post_view_search
@@ -3026,7 +3026,7 @@ msgstr "分享和討論最好的內容及新的營銷理念，建立你的專業
 #: code:addons/website_forum/static/src/xml/public_templates.xml:0
 #, python-format
 msgid "Share on #{media}"
-msgstr ""
+msgstr "分享至 #{media}"
 
 #. module: website_forum
 #. odoo-javascript

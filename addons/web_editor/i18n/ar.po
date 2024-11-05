@@ -4,8 +4,8 @@
 # 
 # Translators:
 # Mustafa Rawi <mustafa@mrawi.com>, 2023
-# Malaz Abuidris <msea@odoo.com>, 2024
 # Wil Odoo, 2024
+# Malaz Abuidris <msea@odoo.com>, 2024
 # 
 msgid ""
 msgstr ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-13 10:28+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Malaz Abuidris <msea@odoo.com>, 2024\n"
 "Language-Team: Arabic (https://app.transifex.com/odoo/teams/41243/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -885,7 +885,7 @@ msgstr "تعذر تثبيت التطبيق %s "
 #: code:addons/web_editor/static/src/components/upload_progress_toast/upload_service.js:0
 #, python-format
 msgid "Could not load the file \"%s\"."
-msgstr ""
+msgstr "لم نتمكن من تحميل الملف \"%s\". "
 
 #. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options_background_options
@@ -2358,7 +2358,7 @@ msgstr "المنصب الوظيفي "
 #: code:addons/web_editor/static/src/xml/snippets.xml:0
 #, python-format
 msgid "Preset #{number}"
-msgstr ""
+msgstr "الافتراضي رقم #{number} "
 
 #. module: web_editor
 #. odoo-javascript
@@ -3739,7 +3739,7 @@ msgstr "تغميق "
 #: code:addons/web_editor/static/src/components/media_dialog/file_selector.xml:0
 #, python-format
 msgid "database"
-msgstr ""
+msgstr "قاعدة البيانات "
 
 #. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options_image_optimization_widgets
@@ -3751,28 +3751,28 @@ msgstr "حصر "
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "fill"
-msgstr ""
+msgstr "تعبئة "
 
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "fill,rounded-circle"
-msgstr ""
+msgstr "تعبئة، دائرة مستديرة "
 
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "flat"
-msgstr ""
+msgstr "مسطح "
 
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "lg"
-msgstr ""
+msgstr "lg"
 
 #. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options_image_optimization_widgets
@@ -3784,7 +3784,7 @@ msgstr "تفتيح "
 #: code:addons/web_editor/static/src/components/media_dialog/file_selector.xml:0
 #, python-format
 msgid "media-library"
-msgstr ""
+msgstr "مكتبة الوسائط "
 
 #. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options_image_optimization_widgets
@@ -3796,14 +3796,14 @@ msgstr "مضاعفة "
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "outline"
-msgstr ""
+msgstr "التحديد "
 
 #. module: web_editor
 #. odoo-javascript
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "outline,rounded-circle"
-msgstr ""
+msgstr "التحديد، دائرة مستديرة "
 
 #. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options_image_optimization_widgets
@@ -3822,7 +3822,7 @@ msgstr "بيكسل "
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "rounded-circle"
-msgstr ""
+msgstr "دائرة مستديرة "
 
 #. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options_image_optimization_widgets
@@ -3834,7 +3834,7 @@ msgstr "شاشة "
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "sm"
-msgstr ""
+msgstr "sm"
 
 #. module: web_editor
 #. odoo-javascript

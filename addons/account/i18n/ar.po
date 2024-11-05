@@ -4,16 +4,16 @@
 # 
 # Translators:
 # Mustafa J. Kadhem <safi2266@gmail.com>, 2024
-# Malaz Abuidris <msea@odoo.com>, 2024
 # Wil Odoo, 2024
+# Malaz Abuidris <msea@odoo.com>, 2024
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0\n"
+"Project-Id-Version: Odoo Server 17.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 10:26+0000\n"
+"POT-Creation-Date: 2024-09-06 12:08+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Malaz Abuidris <msea@odoo.com>, 2024\n"
 "Language-Team: Arabic (https://app.transifex.com/odoo/teams/41243/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1542,6 +1542,20 @@ msgstr ""
 "أولاً ليتم قبولها. "
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of payable type, but is used in a sale operation."
+msgstr ""
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of receivable type, but is used in a purchase operation."
+msgstr ""
+
+#. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings__module_account_avatax
 msgid "Account Avatax"
 msgstr "حساب Avatax "
@@ -1881,6 +1895,11 @@ msgid ""
 msgstr ""
 "الحساب: قم بترحيل مسودات القيود عندما تكون خاصية auto_post مُمَكّنة ويكون "
 "تاريخ المحاسبة حتى اليوم "
+
+#. module: account
+#: model:res.groups,name:account.group_account_manager
+msgid "Accountant"
+msgstr "محاسب "
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings__module_account_accountant
@@ -3362,7 +3381,6 @@ msgid "Billing"
 msgstr "الفوترة "
 
 #. module: account
-#: model:res.groups,name:account.group_account_manager
 msgid "Billing Administrator"
 msgstr "مدير الفوترة "
 
@@ -3413,6 +3431,11 @@ msgstr "فارغ إذا كان صفر "
 #: model:ir.model.fields.selection,name:account.selection__res_partner__invoice_warn__block
 msgid "Blocking Message"
 msgstr "رسالة الحظر"
+
+#. module: account
+#: model:res.groups,name:account.group_account_user
+msgid "Bookkeeper"
+msgstr "ماسك الدفاتر "
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_report_column__figure_type__boolean
@@ -5298,7 +5321,7 @@ msgstr "فاصل الخانات العشرية"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal__refund_sequence
 msgid "Dedicated Credit Note Sequence"
-msgstr "تسلسل إشعارات الخصم المخصصة"
+msgstr "تسلسل الإشعارات الدائنة المخصص "
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal__payment_sequence
@@ -6896,6 +6919,16 @@ msgstr "الصيغة"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_report_expression__carryover_target
+msgid ""
+"Formula in the form line_code.expression_label. This allows setting the "
+"target of the carryover for this expression (on a _carryover_*-labeled "
+"expression), in case it is different from the parent line."
+msgstr ""
+"معادلة في line_code.expression_label. يتيح لك ذلك إعداد الهدف من الترحيل "
+"لهذا التعبير (في تعبير بعنوان _carryover_*)، إذا كان مختلفاً عن البند "
+"الرئيسي. "
+
+#. module: account
 msgid ""
 "Formula in the form line_code.expression_label. This allows setting the "
 "target of the carryover for this expression (on a _carryover_*-labeled "
@@ -9681,7 +9714,7 @@ msgstr "القيمة السالبة لحقل المبلغ إذا كان payment_
 #: code:addons/account/models/account_tax.py:0
 #, python-format
 msgid "Nested group of taxes are not allowed."
-msgstr ""
+msgstr "لا يُسمح بالمجموعة المضمنة من الضرائب. "
 
 #. module: account
 #: model:account.report.column,name:account.generic_tax_report_account_tax_column_net
@@ -11623,6 +11656,11 @@ msgid "Re-Sequence"
 msgstr "إعادة تسلسل "
 
 #. module: account
+#: model:res.groups,name:account.group_account_readonly
+msgid "Read-only"
+msgstr "للقراءة فقط "
+
+#. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_reversal__reason
 msgid "Reason displayed on Credit Note"
 msgstr "السبب المعروض على الإشعار الدائن "
@@ -11694,7 +11732,7 @@ msgstr "تاريخ الإثبات "
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_move_form
 msgid "Recompute all taxes and accounts based on this fiscal position"
-msgstr ""
+msgstr "قم بإعادة احتساب كافة الضرائب والحسابات بناءً على هذا الوضع المالي "
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_line__reconciled
@@ -12920,7 +12958,6 @@ msgstr ""
 "البادئة افتراضياً. "
 
 #. module: account
-#: model:res.groups,name:account.group_account_readonly
 msgid "Show Accounting Features - Readonly"
 msgstr "إظهار الخصائص المحاسبية - للقراءة فقط "
 
@@ -12955,7 +12992,6 @@ msgid "Show Force Tax Included"
 msgstr "Show Force Tax Included"
 
 #. module: account
-#: model:res.groups,name:account.group_account_user
 msgid "Show Full Accounting Features"
 msgstr "عرض كافة الخصائص المحاسبية "
 
@@ -13597,7 +13633,7 @@ msgstr "علامات تصنيف الضرائب "
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_report_line__tax_tags_formula
 msgid "Tax Tags Formula Shortcut"
-msgstr ""
+msgstr "اختصار صيغة علامات تصنيف الضرائب "
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_tax__type_tax_use
@@ -13846,6 +13882,15 @@ msgstr ""
 "لا تطابق %(date_field)s (%(date)s) رقم التسلسل للـ %(model)s (%(sequence)s) ذات الصلة.\n"
 "سوف تحتاج إلى مسح %(model)s %(sequence_field)s حتى تتمكن من الاستمرار.\n"
 "بفعل ذلك، قد ترغب في إعادة تسلسل قيودك حتى تتمكن من الحفاظ على التسلسل المستمر المبني على التاريخ. "
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"The Availability is set to 'Country Matches' but the field Country is not "
+"set."
+msgstr ""
 
 #. module: account
 #. odoo-python
@@ -14106,6 +14151,7 @@ msgid ""
 "The country code of the foreign VAT number does not match any country in the"
 " group."
 msgstr ""
+"رمز الدولة التابعة لرقم الضريبة الأجنبية لا يطابق أي دولة في هذه المجموعة. "
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_tax_group__country_id
@@ -15141,6 +15187,14 @@ msgstr ""
 
 #. module: account
 #. odoo-python
+#: code:addons/account/models/account_journal.py:0
+#, python-format
+msgid ""
+"This journal is associated with a payment method. You cannot archive it"
+msgstr "دفتر اليومية هذا مرتبط بطريقة دفع. لا يمكنك أرشفته "
+
+#. module: account
+#. odoo-python
 #: code:addons/account/models/company.py:0
 #, python-format
 msgid "This journal is not in strict mode."
@@ -15253,6 +15307,8 @@ msgid ""
 "This will update all taxes and accounts based on the currently selected "
 "fiscal position."
 msgstr ""
+"سيقوم ذلك بتحديث كافة الضرائب والحسابات بناءً على الأوضاع المالية المحددة "
+"حالياً. "
 
 #. module: account
 #: model_terms:ir.actions.act_window,help:account.action_validate_account_move
@@ -15701,6 +15757,13 @@ msgid "Unit of Measure"
 msgstr "وحدة القياس"
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/template_generic_coa.py:0
+#, python-format
+msgid "United States of America (Generic)"
+msgstr "الولايات المتحدة الأمريكية (عام) "
+
+#. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_form
 msgid "Unmark as Sent"
 msgstr "إلغاء التحديد كمرسَل "
@@ -15822,7 +15885,7 @@ msgstr "وحدة القياس"
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_move_form
 msgid "Update Taxes and Accounts"
-msgstr ""
+msgstr "تحديث الضرائب والحسابات "
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
@@ -16326,6 +16389,17 @@ msgid ""
 msgstr "عندما يتم تحديده، لن تظهر القيم 0 عند عرض قيمة هذا التعبير. "
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"When targeting an expression for carryover, the label of that expression "
+"must start with _applied_carryover_"
+msgstr ""
+"عندما تستهدف تعبيراً للترحيل، يجب أن يبدأ عنوان ذلك التعبير بـ "
+"_applied_carryover_ "
+
+#. module: account
 #: model_terms:ir.actions.act_window,help:account.action_move_in_receipt_type
 msgid ""
 "When the purchase receipt is confirmed, you can record the\n"
@@ -16703,6 +16777,8 @@ msgid ""
 "You can't reset to draft those journal entries. You need to request a "
 "cancellation instead."
 msgstr ""
+"لا يمكنك إعادة تعيين قيود دفتر اليومية تلك إلى حالة المسودة. عليك طلب "
+"الإلغاء عوضاً عن ذلك. "
 
 #. module: account
 #. odoo-python
@@ -16750,7 +16826,7 @@ msgstr ""
 msgid ""
 "You cannot create a fiscal position with a country outside of the selected "
 "country group."
-msgstr ""
+msgstr "لا يمكنك إنشاء وضع مالي بدولة خارج مجموعة الدول المحددة. "
 
 #. module: account
 #. odoo-python
@@ -17101,6 +17177,17 @@ msgstr "لا يمكنك استخدام حساب مهمل. "
 #, python-format
 msgid "You cannot use taxes on lines with an Off-Balance account"
 msgstr "لا يمكنك استخدام الضرائب في بنود حساب خارج الميزانية العمومية "
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"You cannot use the field carryover_target in an expression that does not "
+"have the label starting with _carryover_"
+msgstr ""
+"لا يمكنك استخدام الحقل carryover_target في تعبير لا يبدأ عنوانه بـ "
+"_carryover_ "
 
 #. module: account
 #. odoo-python

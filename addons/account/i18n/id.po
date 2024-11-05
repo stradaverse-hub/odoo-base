@@ -4,16 +4,16 @@
 # 
 # Translators:
 # Edi Santoso <repopamor@gmail.com>, 2023
-# Abe Manyo, 2024
 # Wil Odoo, 2024
+# Abe Manyo, 2024
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0\n"
+"Project-Id-Version: Odoo Server 17.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 10:26+0000\n"
+"POT-Creation-Date: 2024-09-06 12:08+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Abe Manyo, 2024\n"
 "Language-Team: Indonesian (https://app.transifex.com/odoo/teams/41243/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1559,6 +1559,20 @@ msgstr ""
 "akun ini untuk memungkinkan rekonsiliasi."
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of payable type, but is used in a sale operation."
+msgstr ""
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of receivable type, but is used in a purchase operation."
+msgstr ""
+
+#. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings__module_account_avatax
 msgid "Account Avatax"
 msgstr "Akun Avatax"
@@ -1901,6 +1915,11 @@ msgid ""
 msgstr ""
 "Akun: Post entri draft dengan auto_post yang diaktifkan dan tanggal "
 "akuntansi sampai hari ini"
+
+#. module: account
+#: model:res.groups,name:account.group_account_manager
+msgid "Accountant"
+msgstr "Akuntan"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings__module_account_accountant
@@ -3385,7 +3404,6 @@ msgid "Billing"
 msgstr "Tagihan"
 
 #. module: account
-#: model:res.groups,name:account.group_account_manager
 msgid "Billing Administrator"
 msgstr "Billing Administrator"
 
@@ -3436,6 +3454,11 @@ msgstr "Kosong jika Nol"
 #: model:ir.model.fields.selection,name:account.selection__res_partner__invoice_warn__block
 msgid "Blocking Message"
 msgstr "Blokir Pesan"
+
+#. module: account
+#: model:res.groups,name:account.group_account_user
+msgid "Bookkeeper"
+msgstr "Bookkeeper"
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_report_column__figure_type__boolean
@@ -6955,6 +6978,16 @@ msgstr "Rumus"
 msgid ""
 "Formula in the form line_code.expression_label. This allows setting the "
 "target of the carryover for this expression (on a _carryover_*-labeled "
+"expression), in case it is different from the parent line."
+msgstr ""
+"Formula pada form line_code.expression_label. Ini memungkinkan mengatur "
+"target carryover untuk expression ini (pada expression dengan label "
+"_carryover_*), pada kasus ini berbeda dari parent line."
+
+#. module: account
+msgid ""
+"Formula in the form line_code.expression_label. This allows setting the "
+"target of the carryover for this expression (on a _carryover_*-labeled "
 "expression), in case it is different from the parent line. 'custom' is also "
 "allowed as value in case the carryover destination requires more complex "
 "logic."
@@ -9773,7 +9806,7 @@ msgstr "Value negatif untuk field jumlah bila payment_type outbound"
 #: code:addons/account/models/account_tax.py:0
 #, python-format
 msgid "Nested group of taxes are not allowed."
-msgstr ""
+msgstr "Nested group of taxes tidak diizinkan."
 
 #. module: account
 #: model:account.report.column,name:account.generic_tax_report_account_tax_column_net
@@ -11729,6 +11762,11 @@ msgid "Re-Sequence"
 msgstr "Re-Sequence"
 
 #. module: account
+#: model:res.groups,name:account.group_account_readonly
+msgid "Read-only"
+msgstr "Read-only"
+
+#. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_reversal__reason
 msgid "Reason displayed on Credit Note"
 msgstr "Alasan ditampilkan pada Nota Kredit"
@@ -13042,7 +13080,6 @@ msgstr ""
 " default dinamakan menggunakan awalan ini."
 
 #. module: account
-#: model:res.groups,name:account.group_account_readonly
 msgid "Show Accounting Features - Readonly"
 msgstr "Tunjukkan Fitur Akuntansi - Readonly"
 
@@ -13077,7 +13114,6 @@ msgid "Show Force Tax Included"
 msgstr "Show Force Tax Included"
 
 #. module: account
-#: model:res.groups,name:account.group_account_user
 msgid "Show Full Accounting Features"
 msgstr "Tampilkan Semua Fitur Akuntansi"
 
@@ -13969,6 +14005,17 @@ msgstr ""
 "%(date_field)s (%(date)s) tidak cocok dengan nomor sequence yang terkait %(model)s (%(sequence)s)\n"
 "Anda harus menghapus %(sequence_field)s milik %(model)s untuk melanjutkan.\n"
 "Dengan begitu, Anda mungkin harus melakukan resequence untuk entri Anda untuk menjaga sequence berdasarkan data yang kontinu."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"The Availability is set to 'Country Matches' but the field Country is not "
+"set."
+msgstr ""
+"Ketersediaan ditetapkan menjadi 'Negara Cocok' tapi field Negara tidak "
+"ditetapkan."
 
 #. module: account
 #. odoo-python
@@ -15311,6 +15358,15 @@ msgstr ""
 
 #. module: account
 #. odoo-python
+#: code:addons/account/models/account_journal.py:0
+#, python-format
+msgid ""
+"This journal is associated with a payment method. You cannot archive it"
+msgstr ""
+"Jurnal ini terkait dengan metode pembayaran. Anda tidak dapat mengarsipnya"
+
+#. module: account
+#. odoo-python
 #: code:addons/account/models/company.py:0
 #, python-format
 msgid "This journal is not in strict mode."
@@ -15880,6 +15936,13 @@ msgstr "Harga Satuan:"
 #: model:ir.model.fields,field_description:account.field_account_move_line__product_uom_id
 msgid "Unit of Measure"
 msgstr "Satuan Ukuran"
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/template_generic_coa.py:0
+#, python-format
+msgid "United States of America (Generic)"
+msgstr "Amerika Serikat (Umum)"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_form
@@ -16513,6 +16576,17 @@ msgid ""
 msgstr ""
 "Saat diperiksa, 0 value tidak akan muncul saat menampilkan expression value "
 "ini."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"When targeting an expression for carryover, the label of that expression "
+"must start with _applied_carryover_"
+msgstr ""
+"Saat menarget expression untuk carryover, label dari expression harus "
+"dimulai dengan _applied_carryover_"
 
 #. module: account
 #: model_terms:ir.actions.act_window,help:account.action_move_in_receipt_type
@@ -17347,6 +17421,17 @@ msgstr "You cannot use a deprecated account."
 #, python-format
 msgid "You cannot use taxes on lines with an Off-Balance account"
 msgstr "You cannot use taxes on lines with an Off-Balance account"
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_report.py:0
+#, python-format
+msgid ""
+"You cannot use the field carryover_target in an expression that does not "
+"have the label starting with _carryover_"
+msgstr ""
+"Anda tidak dapat menggunakan field carryover_target di expression yang tidak"
+" memiliki label yang dimulai dengan _carryover_"
 
 #. module: account
 #. odoo-python
