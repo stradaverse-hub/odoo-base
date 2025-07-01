@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="stradaverse_page_layout" inherit_id="web.login_layout" name="Login Page Layout (Stradaverse)">
+        <!-- Stradaverse login UI-->
+        <xpath expr="//div[hasclass('container')]" position="replace">
+            <div class="container stradaverse_login_page">
+                <div t-attf-class="card border-0 bg-100 {{login_card_classes}} o_database_list stradaverse_login_container" style="max-width: 610px;">
+                    <div class="card-body">
+                        <div t-attf-class="text-center pb-3 border-bottom {{'mb-3' if form_small else 'mb-4'}}">
+                            <img t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}" alt="Logo" style="max-height:120px; max-width: 100%; width:auto"/>
+                        </div>
+                        <t t-out="0"/>
+                        <div class="text-center small mt-4 pt-3 login--footer" t-if="not disable_footer">
+                            <t t-if="not disable_database_manager">
+                                <a class="border-end pe-2 me-1" href="/web/database/manager">Manage Databases</a>
+                            </t>
+                            <a href="https://www.stradaverse.ai/" target="_blank">
+                                Powered by <img src="/stradaverse_login_bg/static/src/img/stradaverse_link_logo.png" al="Logo Small" height="16" style="margin: 0px 2px;"/>
+                                <strong>Stradaverse</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="stradaverse_login_background">
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
